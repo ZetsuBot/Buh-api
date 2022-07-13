@@ -2,6 +2,25 @@
 <html lang="en">
 
 <head>
+    <script>
+       const alert = () => {
+
+        Swal.fire({
+  title: 'Custom width, padding, color, background.',
+  width: 600,
+  padding: '3em',
+  color: '#716add',
+  background: '#fff url(https://sweetalert2.github.io/images/trees.png)',
+  backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://sweetalert2.github.io/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+})
+       }
+    </script>
+    <script src="sweetalert2.all.min.js"></script>
     <meta charset="utf-8">
     <title>SATORU-APIS</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -32,7 +51,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="alert()">
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner"
