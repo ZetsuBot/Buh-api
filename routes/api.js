@@ -298,18 +298,24 @@ router.get('/game/adivipersonagem', async (req, res, next) => {
         res.json(loghandler.invalidKey)
     }
 })
+
 router.get('/anime/amv', async (req, res, next) => {
-var Apikey = req.query.apikey
-if(!Apikey) return res.json(loghandler.notparam)
-if(listkey.includes(Apikey)){
-const amv = JSON.parse(fs.readFileSync(__path +'/data/amv.json'));
-const randAmv = amv[Math.floor(Math.random() * amv.length)];
-data = await fetch(randAmv).then(v => v.buffer())
-await fs.writeFileSync(__path +'/tmp/amv.mp4', data)
-res.sendFile(__path +'/tmp/amv.mp4')
-} else {
-res.json(loghandler.invalidKey)
-}
+  var Apikey = req.query.apikey
+  if(!Apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(Apikey)){
+      var amv = JSON.parse(
+          fs.readFileSync(__path + '/data/amv.json')
+      )
+      res
+        .status(200)
+        .json({
+            codigo: 200,
+            successo: true,
+            ...amv[~~(Math.random() * amv.length)]
+        })
+  } else {
+      res.json(loghandler.invalidKey)
+  }
 })
 
 router.get('/download/ytmp3', async(req, res, next) => {
