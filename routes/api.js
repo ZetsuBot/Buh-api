@@ -303,15 +303,13 @@ router.get('/anime/amv', async (req, res, next) => {
   var Apikey = req.query.apikey
   if(!Apikey) return res.json(loghandler.notparam)
   if(listkey.includes(Apikey)){
-      var amv = JSON.parse(
-          fs.readFileSync(__path + '/data/amv.json')
-      )
+      var amv = JSON.parse(fs.readFileSync(__path + '/data/amv.json'))
       res
         .status(200)
         .json({
             codigo: 200,
             successo: true,
-            ...amv[~~(Math.random() * amv.length)]
+             ...amv[~~(Math.random() * amv.length)]
         })
   } else {
       res.json(loghandler.invalidKey)
