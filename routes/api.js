@@ -5142,7 +5142,7 @@ router.get('/textpro/multicolor', async (req, res, next) => {
   }
 });
 
-router.get('/textpro/neondevil', async (req, res, next) => {
+router.get('/textpro/devil', async (req, res, next) => {
 
   const apikey = req.query.apikey;
 
