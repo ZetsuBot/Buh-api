@@ -6253,6 +6253,64 @@ router.get('/textpro/vingadores', async (req, res, next) => {
     res.json(loghandler.invalidKey)
   }
 });
+router.get('/textpro/thor', async (req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  const text = req.query.text;
+  const text2 = req.query.text2;
+
+  if (!apikey) return res.json(loghandler.notparam)
+  if (!text) return res.json(loghandler.nottext)
+  if (!text2) return res.json(loghandler.nottext2)
+
+  if (listkey.includes(apikey)) {
+    zrapi
+      .textpro("https://textpro.me/create-thor-logo-style-text-effect-online-1064.html", [
+        text, text2
+      ])
+      .then((data) => {
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
+        })
+      })
+      .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+});
+router.get('/textpro/capitaoamerica', async (req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  const text = req.query.text;
+  const text2 = req.query.text2;
+
+  if (!apikey) return res.json(loghandler.notparam)
+  if (!text) return res.json(loghandler.nottext)
+  if (!text2) return res.json(loghandler.nottext2)
+
+  if (listkey.includes(apikey)) {
+    zrapi
+      .textpro("https://textpro.me/create-a-captain-america-text-effect-free-online-1039.html", [
+        text, text2
+      ])
+      .then((data) => {
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
+        })
+      })
+      .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+});
 
 router.get('/textpro/glitch2', async (req, res, next) => {
 
@@ -6383,6 +6441,61 @@ router.get('/textpro/blackpink', async (req, res, next) => {
   if (listkey.includes(apikey)) {
     zrapi
       .textpro("https://textpro.me/create-blackpink-logo-style-online-1001.html", [
+        text,
+      ])
+      .then((data) => {
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
+        })
+      })
+      .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+});
+
+router.get('/textpro/urso', async (req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  const text = req.query.text;
+
+  if (!apikey) return res.json(loghandler.notparam)
+  if (!text) return res.json(loghandler.nottext)
+
+  if (listkey.includes(apikey)) {
+    zrapi
+      .textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html", [
+        text,
+      ])
+      .then((data) => {
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
+        })
+      })
+      .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+});
+router.get('/textpro/verao', async (req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  const text = req.query.text;
+
+  if (!apikey) return res.json(loghandler.notparam)
+  if (!text) return res.json(loghandler.nottext)
+
+  if (listkey.includes(apikey)) {
+    zrapi
+      .textpro("https://textpro.me/create-a-summer-neon-light-text-effect-online-1076.html", [
         text,
       ])
       .then((data) => {
