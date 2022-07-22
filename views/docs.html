@@ -2,31 +2,14 @@
 <html lang="en">
 
 <head>
-    <script>
-       const alert = () => {
-
-        Swal.fire({
-  title: 'Custom width, padding, color, background.',
-  width: 600,
-  padding: '3em',
-  color: '#716add',
-  background: '#fff url(https://sweetalert2.github.io/images/trees.png)',
-  backdrop: `
-    rgba(0,0,123,0.4)
-    url("https://sweetalert2.github.io/images/nyan-cat.gif")
-    left top
-    no-repeat
-  `
-})
-       }
-    </script>
     <script src="sweetalert2.all.min.js"></script>
     <meta charset="utf-8">
     <title>SATORU-APIS</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Favicon -->
     <link href="img/satoru.png" rel="icon">
 
@@ -35,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -77,21 +60,22 @@
 
                     <a href="index.html" class="nav-item nav-link active padding"><i
                             class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                            
-    <a href="api/game" class="nav-item nav-link">
-        <i class="fas fa-ghost"></i> Jogar</a>
+
+                    <a href="api/game" class="nav-item nav-link">
+                        <i class="fas fa-ghost"></i> Jogar</a>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-download" aria-hidden="true"></i> DOWNLOADER</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-download"
+                                aria-hidden="true"></i> DOWNLOADER</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a class="dropdown-item" target="_blank"
-                                href="/api/download/ytmp4?url=https://youtu.be/6l5V3BWDcMw&apikey=APIKEY"
+                                href="/api/download/ytmp4?url=https://www.youtube.com/watch?v=7AlAYttGnAg&apikey=APIKEY"
                                 target="_blank">Youtube Video</a>
                             <a class="dropdown-item" target="_blank"
-                                href="/api/download/ytmp3?url=https://youtu.be/6l5V3BWDcMw&apikey=APIKEY"
+                                href="/api/download/ytmp3?url=https://www.youtube.com/watch?v=7AlAYttGnAg&apikey=APIKEY"
                                 target="_blank">Youtube Audio</a>
                             <a class="dropdown-item" target="_blank"
-                                href="/api/download/ytmp32?url=https://youtu.be/6l5V3BWDcMw&apikey=APIKEY"
+                                href="/api/download/ytmp32?url=https://www.youtube.com/watch?v=7AlAYttGnAg&apikey=APIKEY"
                                 target="_blank">Youtube Audio2</a>
                             <a class="dropdown-item" target="_blank"
                                 href="/api/downloader/pinterest?q=aeshestic&apikey=APIKEY" target="_blank">Busca
@@ -135,7 +119,7 @@
                                 target="_blank">Adivinhe o Personagem 👦</a>
                         </div>
                     </div>
-                <!--    <div class="nav-item dropdown">
+                    <!--    <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> NSFW </a>
                         <div class="dropdown-menu bg-transparent border-0">
                       <a class="dropdown-item" target="_blank" href="/api/wallpaper/nsfwloli?apikey=APIKEY" target="_blank" >Nswf loli</a>
@@ -168,277 +152,288 @@
                     </div>-->
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-file-text" aria-hidden="true"></i> TEXTPRO</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="fa fa-file-text" aria-hidden="true"></i> TEXTPRO</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                        <a class="dropdown-item" href="/api/textpro/magma?text=Revita&apikey=APIKEY"
-                            target="_blank">Magma</a>
-                        <a class="dropdown-item" href="/api/textpro/hallowen?text=Revita&apikey=APIKEY"
-                            target="_blank">Hallowen</a>
-                        <a class="dropdown-item" href="/api/textpro/neon?text=Revita&apikey=APIKEY"
-                            target="_blank">Neon</a>
-                        <a class="dropdown-item" href="/api/textpro/broken?text=Revita&apikey=APIKEY"
-                            target="_blank">Broken</a>
-                        <a class="dropdown-item" href="/api/textpro/artpapper?text=Revita&apikey=APIKEY"
-                            target="_blank">Art Papper</a>
-                        <a class="dropdown-item" href="/api/textpro/glossy?text=Revita&apikey=APIKEY"
-                            target="_blank">Glossy</a>
-                        <a class="dropdown-item" href="/api/textpro/water?text=Revita&apikey=APIKEY"
-                            target="_blank">Water</a>
-                        <a class="dropdown-item" href="/api/textpro/multicolor?text=Revita&apikey=APIKEY"
-                            target="_blank">Multi Color</a>
-                        <a class="dropdown-item" href="/api/textpro/neondevil?text=Revita&apikey=APIKEY"
-                            target="_blank">Neon Devil</a>
-                        <a class="dropdown-item" href="/api/textpro/skytext?text=Revita&apikey=APIKEY"
-                            target="_blank">Sky Text</a>
-                        <a class="dropdown-item" href="/api/textpro/luxury?text=Revita&apikey=APIKEY"
-                            target="_blank">Luxury</a>
-                        <a class="dropdown-item" href="/api/textpro/vintage?text=Revita&text2=canszz&apikey=APIKEY"
-                            target="_blank">Vintage</a>
-                        <a class="dropdown-item" href="/api/textpro/writing?text=Revita&apikey=APIKEY"
-                            target="_blank">Writing</a>
-                        <a class="dropdown-item" href="/api/textpro/engraved?text=Revita&apikey=APIKEY"
-                            target="_blank">Engraved</a>
-                        <a class="dropdown-item" href="/api/textpro/gluetext?text=Revita&apikey=APIKEY"
-                            target="_blank">Glue Text</a>
-                        <a class="dropdown-item" href="/api/textpro/pornhub?text=Revita&text2=cans&apikey=APIKEY"
-                            target="_blank">Porn HUB</a>
-                        <a class="dropdown-item" href="/api/textpro/holograpic?text=Revita&apikey=APIKEY"
-                            target="_blank">Holograpic</a>
-                        <a class="dropdown-item" href="/api/textpro/deluxe?text=Revita&apikey=APIKEY"
-                            target="_blank">Deluxe Silver</a>
-                        <a class="dropdown-item" href="/api/textpro/fabric?text=Revita&apikey=APIKEY"
-                            target="_blank">Fabric</a>
-                        <a class="dropdown-item" href="/api/textpro/wicker?text=Revita&apikey=APIKEY"
-                            target="_blank">Wicker</a>
-                        <a class="dropdown-item" href="/api/textpro/lava?text=Revita&apikey=APIKEY"
-                            target="_blank">Lava</a>
-                        <a class="dropdown-item" href="/api/textpro/toxic?text=Revita&apikey=APIKEY"
-                            target="_blank">Toxic</a>
-                        <a class="dropdown-item" href="/api/textpro/stroberi?text=Revita&apikey=APIKEY"
-                            target="_blank">Strobery</a>
-                   
-                        <a class="dropdown-item" href="/api/textpro/bread?text=Revita&apikey=APIKEY"
-                            target="_blank">Pão</a>
-                        <a class="dropdown-item" href="/api/textpro/hororblood?text=Revita&apikey=APIKEY"
-                            target="_blank">Sangue</a>
-                        <a class="dropdown-item" href="/api/textpro/honey?text=Revita&apikey=APIKEY"
-                            target="_blank">honey</a>
-                        <a class="dropdown-item" href="/api/textpro/ice?text=Revita&apikey=APIKEY"
-                            target="_blank">Ice</a>
-                        <a class="dropdown-item" href="/api/textpro/rusty?text=Revita&apikey=APIKEY"
-                            target="_blank">Rusty Effect</a>
-                       <!-- <a class="dropdown-item" href="/api/textpro/capitaoamerica?text=Revita&text2=cans&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/magma?text=SATORU&apikey=APIKEY"
+                                target="_blank">Magma</a>
+                            <a class="dropdown-item" href="/api/textpro/hallowen?text=SATORU&apikey=APIKEY"
+                                target="_blank">Hallowen</a>
+                            <a class="dropdown-item" href="/api/textpro/neon?text=SATORU&apikey=APIKEY"
+                                target="_blank">Neon</a>
+                            <a class="dropdown-item" href="/api/textpro/broken?text=SATORU&apikey=APIKEY"
+                                target="_blank">Broken</a>
+                            <a class="dropdown-item" href="/api/textpro/artpapper?text=SATORU&apikey=APIKEY"
+                                target="_blank">Art Papper</a>
+                            <a class="dropdown-item" href="/api/textpro/glossy?text=SATORU&apikey=APIKEY"
+                                target="_blank">Glossy</a>
+                            <a class="dropdown-item" href="/api/textpro/water?text=SATORU&apikey=APIKEY"
+                                target="_blank">Water</a>
+                            <a class="dropdown-item" href="/api/textpro/multicolor?text=SATORU&apikey=APIKEY"
+                                target="_blank">Multi Color</a>
+                            <a class="dropdown-item" href="/api/textpro/neondevil?text=SATORU&apikey=APIKEY"
+                                target="_blank">Neon Devil</a>
+                            <a class="dropdown-item" href="/api/textpro/skytext?text=SATORU&apikey=APIKEY"
+                                target="_blank">Sky Text</a>
+                            <a class="dropdown-item" href="/api/textpro/luxury?text=SATORU&apikey=APIKEY"
+                                target="_blank">Luxury</a>
+                            <a class="dropdown-item" href="/api/textpro/vintage?text=SATORU&text2=API&apikey=APIKEY"
+                                target="_blank">Vintage</a>
+                            <a class="dropdown-item" href="/api/textpro/writing?text=SATORU&apikey=APIKEY"
+                                target="_blank">Writing</a>
+                            <a class="dropdown-item" href="/api/textpro/engraved?text=SATORU&apikey=APIKEY"
+                                target="_blank">Engraved</a>
+                            <a class="dropdown-item" href="/api/textpro/gluetext?text=SATORU&apikey=APIKEY"
+                                target="_blank">Glue Text</a>
+                            <a class="dropdown-item" href="/api/textpro/pornhub?text=SATORU&text2=cans&apikey=APIKEY"
+                                target="_blank">Porn HUB</a>
+                            <a class="dropdown-item" href="/api/textpro/holograpic?text=SATORU&apikey=APIKEY"
+                                target="_blank">Holograpic</a>
+                            <a class="dropdown-item" href="/api/textpro/deluxe?text=SATORU&apikey=APIKEY"
+                                target="_blank">Deluxe Silver</a>
+                            <a class="dropdown-item" href="/api/textpro/fabric?text=SATORU&apikey=APIKEY"
+                                target="_blank">Fabric</a>
+                            <a class="dropdown-item" href="/api/textpro/wicker?text=SATORU&apikey=APIKEY"
+                                target="_blank">Wicker</a>
+                            <a class="dropdown-item" href="/api/textpro/lava?text=SATORU&apikey=APIKEY"
+                                target="_blank">Lava</a>
+                            <a class="dropdown-item" href="/api/textpro/toxic?text=SATORU&apikey=APIKEY"
+                                target="_blank">Toxic</a>
+                            <a class="dropdown-item" href="/api/textpro/stroberi?text=SATORU&apikey=APIKEY"
+                                target="_blank">Strobery</a>
+
+                            <a class="dropdown-item" href="/api/textpro/bread?text=SATORU&apikey=APIKEY"
+                                target="_blank">Pão</a>
+                            <a class="dropdown-item" href="/api/textpro/hororblood?text=SATORU&apikey=APIKEY"
+                                target="_blank">Sangue</a>
+                            <a class="dropdown-item" href="/api/textpro/honey?text=SATORU&apikey=APIKEY"
+                                target="_blank">honey</a>
+                            <a class="dropdown-item" href="/api/textpro/ice?text=SATORU&apikey=APIKEY"
+                                target="_blank">Ice</a>
+                            <a class="dropdown-item" href="/api/textpro/rusty?text=SATORU&apikey=APIKEY"
+                                target="_blank">Rusty Effect</a>
+                            <!-- <a class="dropdown-item" href="/api/textpro/capitaoamerica?text=SATORU&text2=cans&apikey=APIKEY"
                             target="_blank">Capitão América</a>-->
-                        <a class="dropdown-item" href="/api/textpro/gradiente?text=Revita&apikey=APIKEY"
-                            target="_blank">Gradiente</a>
-                        <a class="dropdown-item" href="/api/textpro/natal?text=Revita&apikey=APIKEY"
-                            target="_blank">Natal</a>
-                        <a class="dropdown-item" href="/api/textpro/drop-water?text=Revita&apikey=APIKEY"
-                            target="_blank">Água</a>
-                        <a class="dropdown-item" href="/api/textpro/blackpink?text=Revita&apikey=APIKEY"
-                            target="_blank">BlackPink</a>
-                        <a class="dropdown-item" href="/api/textpro/wolf?text=Revita&text2=api&apikey=APIKEY"
-                            target="_blank">Wolf</a>
-                        <a class="dropdown-item" href="/api/textpro/naturalleavest?text=Revita&apikey=APIKEY"
-                            target="_blank">Natural leavest</a>
-                        <a class="dropdown-item" href="/api/textpro/wolf2?text=Revita&text2=api&apikey=APIKEY"
-                            target="_blank">Logo Wolf 2</a>
-                        <a class="dropdown-item" href="/api/textpro/harrypotter?text=Revita&apikey=APIKEY"
-                            target="_blank">Harry Potter</a>
-                        <a class="dropdown-item" href="/api/textpro/stone?text=Revita&apikey=APIKEY"
-                            target="_blank">Stone</a>
-                        <a class="dropdown-item" href="/api/textpro/1917?text=Revita&apikey=APIKEY"
-                            target="_blank">1917</a>
-                        <a class="dropdown-item" href="/api/textpro/thunder2?text=Revita&apikey=APIKEY"
-                            target="_blank">Thunder 2</a>
-                        <a class="dropdown-item" href="/api/textpro/space?text=Revita&text2=cans&apikey=APIKEY"
-                            target="_blank">Space</a>
-                        <a class="dropdown-item" href="/api/textpro/joker?text=Revita&apikey=APIKEY"
-                            target="_blank">Joker logo</a>
-                        <a class="dropdown-item" href="/api/textpro/hallowen?text=Revita&apikey=APIKEY"
-                            target="_blank">hallowen</a>
-                        <a class="dropdown-item" href="/api/textpro/blood?text=Revita&apikey=APIKEY"
-                            target="_blank">Blood text</a>
-                        <a class="dropdown-item" href="/api/textpro/astone?text=Revita&apikey=APIKEY"
-                            target="_blank">Astone</a>
-                        <a class="dropdown-item" href="/api/textpro/grafite?text=Revita&apikey=APIKEY"
-                            target="_blank">Grafite</a>
-                        <a class="dropdown-item" href="/api/textpro/grafite2?text=Revita&text2=cans&apikey=APIKEY"
-                            target="_blank">Grafite 2</a>
-                        <a class="dropdown-item" href="/api/textpro/ninjalogo?text=Revita&text2=canszz&apikey=APIKEY"
-                            target="_blank">Ninja logo</a>
-                        <a class="dropdown-item" href="/api/textpro/leao?text=Revita&text2=cansz&apikey=APIKEY"
-                            target="_blank">leao logo</a>
-                        <a class="dropdown-item" href="/api/textpro/vingadores?text=Revita&text2=cans&apikey=APIKEY"
-                            target="_blank">vingadores</a>
-                        <a class="dropdown-item" href="/api/textpro/marvel?text=Revita&text2=cans"
-                            target="_blank">Marvel</a>
+                            <a class="dropdown-item" href="/api/textpro/gradiente?text=SATORU&apikey=APIKEY"
+                                target="_blank">Gradiente</a>
+                            <a class="dropdown-item" href="/api/textpro/natal?text=SATORU&apikey=APIKEY"
+                                target="_blank">Natal</a>
+                            <a class="dropdown-item" href="/api/textpro/drop-water?text=SATORU&apikey=APIKEY"
+                                target="_blank">Água</a>
+                            <a class="dropdown-item" href="/api/textpro/blackpink?text=SATORU&apikey=APIKEY"
+                                target="_blank">BlackPink</a>
+                            <a class="dropdown-item" href="/api/textpro/wolf?text=SATORU&text2=api&apikey=APIKEY"
+                                target="_blank">Wolf</a>
+                            <a class="dropdown-item" href="/api/textpro/naturalleavest?text=SATORU&apikey=APIKEY"
+                                target="_blank">Natural leavest</a>
+                            <a class="dropdown-item" href="/api/textpro/wolf2?text=SATORU&text2=api&apikey=APIKEY"
+                                target="_blank">Logo Wolf 2</a>
+                            <a class="dropdown-item" href="/api/textpro/harrypotter?text=SATORU&apikey=APIKEY"
+                                target="_blank">Harry Potter</a>
+                            <a class="dropdown-item" href="/api/textpro/stone?text=SATORU&apikey=APIKEY"
+                                target="_blank">Stone</a>
+                            <a class="dropdown-item" href="/api/textpro/1917?text=SATORU&apikey=APIKEY"
+                                target="_blank">1917</a>
+                            <a class="dropdown-item" href="/api/textpro/thunder2?text=SATORU&apikey=APIKEY"
+                                target="_blank">Thunder 2</a>
+                            <a class="dropdown-item" href="/api/textpro/space?text=SATORU&text2=cans&apikey=APIKEY"
+                                target="_blank">Space</a>
+                            <a class="dropdown-item" href="/api/textpro/joker?text=SATORU&apikey=APIKEY"
+                                target="_blank">Joker logo</a>
+                            <a class="dropdown-item" href="/api/textpro/hallowen?text=SATORU&apikey=APIKEY"
+                                target="_blank">hallowen</a>
+                            <a class="dropdown-item" href="/api/textpro/blood?text=SATORU&apikey=APIKEY"
+                                target="_blank">Blood text</a>
+                            <a class="dropdown-item" href="/api/textpro/astone?text=SATORU&apikey=APIKEY"
+                                target="_blank">Astone</a>
+                            <a class="dropdown-item" href="/api/textpro/grafite?text=SATORU&apikey=APIKEY"
+                                target="_blank">Grafite</a>
+                            <a class="dropdown-item" href="/api/textpro/grafite2?text=SATORU&text2=cans&apikey=APIKEY"
+                                target="_blank">Grafite 2</a>
+                            <a class="dropdown-item"
+                                href="/api/textpro/ninjalogo?text=SATORU&text2=API&apikey=APIKEY"
+                                target="_blank">Ninja logo</a>
+                            <a class="dropdown-item" href="/api/textpro/leao?text=SATORU&text2=cansz&apikey=APIKEY"
+                                target="_blank">leao logo</a>
+                            <a class="dropdown-item" href="/api/textpro/vingadores?text=SATORU&text2=cans&apikey=APIKEY"
+                                target="_blank">vingadores</a>
+                            <a class="dropdown-item" href="/api/textpro/marvel?text=SATORU&text2=cans"
+                                target="_blank">Marvel</a>
                         </div>
                     </div>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-picture-o" aria-hidden="true"></i></i> WALLPAPER</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="fa fa-picture-o" aria-hidden="true"></i></i> WALLPAPER</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/satanic?apikey=APIKEY">Wallpaper
-                                    Satanic </a>
-        
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/cartoon?apikey=APIKEY">Wallpaper
-                                    Cartoon </a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/planet#?apikey=APIKEY">Wallpaper Planeta </a>
-                                <a class="dropdown-item" target="_blank"
-                                    href="/api/wallpaper/cyberespaco?apikey=APIKEY">Wallpaper Cyberspace </a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/gaming?apikey=APIKEY">Wallpaper
-                                    Gamer </a>
-        
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/programador?apikey=APIKEY">
-                                    Wallpaper Programador </a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/tec?apikey=APIKEY">
-                                    Wallpaper Tecnologia</a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/mountain?apikey=APIKEY"> Wallpaper
-                                    Montanhas</a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/ppcouple?apikey=APIKEY"
-                                    target="_blank">Random PPcouple</a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/kpop?apikey=APIKEY"
-                                    target="_blank">Random Kpop</a>
-        
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/pubg?apikey=APIKEY"
-                                    target="_blank">Random PUBG</a>
-        
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=APIKEY"
-                                    target="_blank">Random Aesthetic</a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=APIKEY"
-                                    target="_blank">Random Wallpaper Aesthetic</a>
-                                <a class="dropdown-item" target="_blank" href="/api/wallpaper/anime?apikey=APIKEY"
-                                    target="_blank">Random Wallpaper Anime</a>
-                                </div></div>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-film" aria-hidden="true"></i>ANIMES</a>
-                                    <div class="dropdown-menu bg-transparent border-0">
-                                        <a class="dropdown-item" target="_blank" href="/api/anime/amv?apikey=APIKEY"
-                                        target="_blank">AMV</a>
-                                        <a class="dropdown-item" target="_blank" href="/api/random/cosplay?apikey=APIKEY"
-                                        target="_blank">Cosplay</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/waifu?apikey=APIKEY"
-                                        target="_blank">Waifu</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/waifu2?apikey=APIKEY"
-                                        target="_blank">Waifu2</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/shota?apikey=APIKEY"
-                                        target="_blank">shota</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/loli?apikey=APIKEY"
-                                        target="_blank">Loli</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/yotsuba?apikey=APIKEY"
-                                        target="_blank">Random Yotsuba</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/shinomiya?apikey=APIKEY"
-                                        target="_blank">Random Shinomiya</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/yumeko?apikey=APIKEY"
-                                        target="_blank">Random Yumeko</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/tejina?apikey=APIKEY"
-                                        target="_blank">Random Tejina</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/chiho?apikey=APIKEY"
-                                        target="_blank">Random Chiho</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/boruto?apikey=APIKEY"
-                                        target="_blank">Random Boruto</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/kaori?apikey=APIKEY"
-                                        target="_blank">Random Kaori</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/shizuka?apikey=APIKEY"
-                                        target="_blank">Random Shizuka</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/kaga?apikey=APIKEY"
-                                        target="_blank">Random Kaga</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/kotori?apikey=APIKEY"
-                                        target="_blank">Random Kotori</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/mikasa?apikey=APIKEY"
-                                        target="_blank">Random Mikasa</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/akiyama?apikey=APIKEY"
-                                        target="_blank">Random Akiyama</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/gremory?apikey=APIKEY"
-                                        target="_blank">Random Gremory</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/isuzu?apikey=APIKEY"
-                                        target="_blank">Random Isuzu</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/shina?apikey=APIKEY"
-                                        target="_blank">Random Shina</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/kagura?apikey=APIKEY"
-                                        target="_blank">Random Kagura</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/shinka?apikey=APIKEY"
-                                        target="_blank">Random Shinka</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/eba?apikey=APIKEY"
-                                        target="_blank">Random Eba</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/elaina?apikey=APIKEY"
-                                        target="_blank">Random Elaina</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/yuri?apikey=APIKEY"
-                                        target="_blank">Random Yuri</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/erza?apikey=APIKEY"
-                                        target="_blank">Random Erza</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/hinata?apikey=APIKEY"
-                                        target="_blank">Random Hinata</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/minato?apikey=APIKEY"
-                                        target="_blank">Random Minato</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/naruto?apikey=APIKEY"
-                                        target="_blank">Random Naruto</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/sagiri?apikey=APIKEY"
-                                        target="_blank">Random Sagiri</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/nezuko?apikey=APIKEY"
-                                        target="_blank">Random Nezuko</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/rize?apikey=APIKEY"
-                                        target="_blank">Random Rize</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/ana?apikey=APIKEY"
-                                        target="_blank">Random Anna</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/deidara?apikey=APIKEY"
-                                        target="_blank">Random Deidara</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/yuki?apikey=APIKEY"
-                                        target="_blank">Random Yuki</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/ana?apikey=APIKEY"
-                                        target="_blank">Random Anna</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/asuna?apikey=APIKEY"
-                                        target="_blank">Random Asuna</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/ayuzawa?apikey=APIKEY"
-                                        target="_blank">Random Ayuzawa</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/chitoge?apikey=APIKEY"
-                                        target="_blank">Random Chitoge</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/emilia?apikey=APIKEY"
-                                        target="_blank">Random Emilia</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/hestia?apikey=APIKEY"
-                                        target="_blank">Random Hestia</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/inori?apikey=APIKEY"
-                                        target="_blank">Random Inori</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/itachi?apikey=APIKEY"
-                                        target="_blank">Random Itachi</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/madara?apikey=APIKEY"
-                                        target="_blank">Random Madara</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/sakura?apikey=APIKEY"
-                                        target="_blank">Random Sakura</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/sasuke?apikey=APIKEY"
-                                        target="_blank">Random Sasuke</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/tsunade?apikey=APIKEY"
-                                        target="_blank">Random Tsunade</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/onepiece?apikey=APIKEY"
-                                        target="_blank">Random One Piece</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/mobil?apikey=APIKEY"
-                                        target="_blank">Random Mobil</a>
-            
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/keneki?apikey=APIKEY"
-                                        target="_blank">Random Kaneki</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/megumin?apikey=APIKEY"
-                                        target="_blank">Random Megumin</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/toukachan?apikey=APIKEY"
-                                        target="_blank">Random Toukachan</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/akira?apikey=APIKEY"
-                                        target="_blank">Random Akira</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/itori?apikey=APIKEY"
-                                        target="_blank">Random Itori</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/kurumi?apikey=APIKEY"
-                                        target="_blank">Random Kurumi</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/miku?apikey=APIKEY"
-                                        target="_blank">Random Miku</a>
-                                    <a class="dropdown-item" target="_blank" href="/api/wallpaper/pokemon?apikey=APIKEY"
-                                        target="_blank">Random Pokemon</a>
-                                </div>
-                            </div>
-                                    
-                                    
-                                    </div></div>
+                            <a class="dropdown-item" target="_blank"
+                                href="/api/wallpaper/satanic?apikey=APIKEY">Wallpaper
+                                Satanic </a>
+
+                            <a class="dropdown-item" target="_blank"
+                                href="/api/wallpaper/cartoon?apikey=APIKEY">Wallpaper
+                                Cartoon </a>
+                            <a class="dropdown-item" target="_blank"
+                                href="/api/wallpaper/planet#?apikey=APIKEY">Wallpaper Planeta </a>
+                            <a class="dropdown-item" target="_blank"
+                                href="/api/wallpaper/cyberespaco?apikey=APIKEY">Wallpaper Cyberspace </a>
+                            <a class="dropdown-item" target="_blank"
+                                href="/api/wallpaper/gaming?apikey=APIKEY">Wallpaper
+                                Gamer </a>
+
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/programador?apikey=APIKEY">
+                                Wallpaper Programador </a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/tec?apikey=APIKEY">
+                                Wallpaper Tecnologia</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/mountain?apikey=APIKEY">
+                                Wallpaper
+                                Montanhas</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/ppcouple?apikey=APIKEY"
+                                target="_blank">Random PPcouple</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/kpop?apikey=APIKEY"
+                                target="_blank">Random Kpop</a>
+
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/pubg?apikey=APIKEY"
+                                target="_blank">Random PUBG</a>
+
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=APIKEY"
+                                target="_blank">Random Aesthetic</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=APIKEY"
+                                target="_blank">Random Wallpaper Aesthetic</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/anime?apikey=APIKEY"
+                                target="_blank">Random Wallpaper Anime</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-film"
+                                aria-hidden="true"></i>ANIMES</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a class="dropdown-item" target="_blank" href="/api/anime/amv?apikey=APIKEY"
+                                target="_blank">AMV</a>
+                            <a class="dropdown-item" target="_blank" href="/api/random/cosplay?apikey=APIKEY"
+                                target="_blank">Cosplay</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/waifu?apikey=APIKEY"
+                                target="_blank">Waifu</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/waifu2?apikey=APIKEY"
+                                target="_blank">Waifu2</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/shota?apikey=APIKEY"
+                                target="_blank">shota</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/loli?apikey=APIKEY"
+                                target="_blank">Loli</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/yotsuba?apikey=APIKEY"
+                                target="_blank">Random Yotsuba</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/shinomiya?apikey=APIKEY"
+                                target="_blank">Random Shinomiya</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/yumeko?apikey=APIKEY"
+                                target="_blank">Random Yumeko</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/tejina?apikey=APIKEY"
+                                target="_blank">Random Tejina</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/chiho?apikey=APIKEY"
+                                target="_blank">Random Chiho</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/boruto?apikey=APIKEY"
+                                target="_blank">Random Boruto</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/kaori?apikey=APIKEY"
+                                target="_blank">Random Kaori</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/shizuka?apikey=APIKEY"
+                                target="_blank">Random Shizuka</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/kaga?apikey=APIKEY"
+                                target="_blank">Random Kaga</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/kotori?apikey=APIKEY"
+                                target="_blank">Random Kotori</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/mikasa?apikey=APIKEY"
+                                target="_blank">Random Mikasa</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/akiyama?apikey=APIKEY"
+                                target="_blank">Random Akiyama</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/gremory?apikey=APIKEY"
+                                target="_blank">Random Gremory</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/isuzu?apikey=APIKEY"
+                                target="_blank">Random Isuzu</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/shina?apikey=APIKEY"
+                                target="_blank">Random Shina</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/kagura?apikey=APIKEY"
+                                target="_blank">Random Kagura</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/shinka?apikey=APIKEY"
+                                target="_blank">Random Shinka</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/eba?apikey=APIKEY"
+                                target="_blank">Random Eba</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/elaina?apikey=APIKEY"
+                                target="_blank">Random Elaina</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/yuri?apikey=APIKEY"
+                                target="_blank">Random Yuri</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/erza?apikey=APIKEY"
+                                target="_blank">Random Erza</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/hinata?apikey=APIKEY"
+                                target="_blank">Random Hinata</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/minato?apikey=APIKEY"
+                                target="_blank">Random Minato</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/naruto?apikey=APIKEY"
+                                target="_blank">Random Naruto</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/sagiri?apikey=APIKEY"
+                                target="_blank">Random Sagiri</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/nezuko?apikey=APIKEY"
+                                target="_blank">Random Nezuko</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/rize?apikey=APIKEY"
+                                target="_blank">Random Rize</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/ana?apikey=APIKEY"
+                                target="_blank">Random Anna</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/deidara?apikey=APIKEY"
+                                target="_blank">Random Deidara</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/yuki?apikey=APIKEY"
+                                target="_blank">Random Yuki</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/ana?apikey=APIKEY"
+                                target="_blank">Random Anna</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/asuna?apikey=APIKEY"
+                                target="_blank">Random Asuna</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/ayuzawa?apikey=APIKEY"
+                                target="_blank">Random Ayuzawa</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/chitoge?apikey=APIKEY"
+                                target="_blank">Random Chitoge</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/emilia?apikey=APIKEY"
+                                target="_blank">Random Emilia</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/hestia?apikey=APIKEY"
+                                target="_blank">Random Hestia</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/inori?apikey=APIKEY"
+                                target="_blank">Random Inori</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/itachi?apikey=APIKEY"
+                                target="_blank">Random Itachi</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/madara?apikey=APIKEY"
+                                target="_blank">Random Madara</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/sakura?apikey=APIKEY"
+                                target="_blank">Random Sakura</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/sasuke?apikey=APIKEY"
+                                target="_blank">Random Sasuke</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/tsunade?apikey=APIKEY"
+                                target="_blank">Random Tsunade</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/onepiece?apikey=APIKEY"
+                                target="_blank">Random One Piece</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/mobil?apikey=APIKEY"
+                                target="_blank">Random Mobil</a>
+
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/keneki?apikey=APIKEY"
+                                target="_blank">Random Kaneki</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/megumin?apikey=APIKEY"
+                                target="_blank">Random Megumin</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/toukachan?apikey=APIKEY"
+                                target="_blank">Random Toukachan</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/akira?apikey=APIKEY"
+                                target="_blank">Random Akira</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/itori?apikey=APIKEY"
+                                target="_blank">Random Itori</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/kurumi?apikey=APIKEY"
+                                target="_blank">Random Kurumi</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/miku?apikey=APIKEY"
+                                target="_blank">Random Miku</a>
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/pokemon?apikey=APIKEY"
+                                target="_blank">Random Pokemon</a>
+                        </div>
+                    </div>
+
+
                 </div>
         </div>
-        </nav>
+    </div>
+    </div>
+    </nav>
     </div>
     <!-- Sidebar End -->
 
@@ -462,12 +457,14 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                         <a href="#" class="dropdown-item">
-                            <h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Novo Estilo!</h6>
+                            <h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                Novo Estilo!</h6>
                             <small>5 minutos atrás</small>
                         </a>
                         <hr class="dropdown-divider">
                         <a href="#" class="dropdown-item">
-                            <h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Site Criado!</h6>
+                            <h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                Site Criado!</h6>
                             <small>12/06/22 </small>
                         </a>
                     </div>
@@ -489,42 +486,48 @@
         </nav>
 
         <!-- Footer Start -->
-      
+
         <div class="container-fluid pt-4 px-4" align="center" width="279">
-            
-             <div class="col-sm-12 col-xl-6">
+
+            <div class="col-sm-12 col-xl-6">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4" align="start">Sobre <i class="fa fa-info-circle" aria-hidden="true"></i></h6>
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item text-center">
-                            <img class="img-fluid rounded-circle mx-auto mb-4" src="img/icon.jpg" style="width: 100px; height: 100px;">
+                            <img class="img-fluid rounded-circle mx-auto mb-4" src="img/icon.jpg"
+                                style="width: 100px; height: 100px;">
                             <h5 class="mb-1">DESENVOLVIDO POR:</h5>
                             <p>Brunoww</p>
-               
-                            <p>Esse é um conjunto de Apis gratuito &#128512; <br>Se houver bugs por favor me contate!!</p>
+
+                            <p>Esse é um conjunto de Apis gratuito &#128512; <br>Se houver bugs por favor me contate!!
+                            </p>
                             <div class="icons-container" align="start">
                                 <a href="https://github.com/bruno918/" class="icon">
-                                     <i class="fab fa-github"></i>
+                                    <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://instagram.com/b_r_u_n_o76" class="icon">
-                                     <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-instagram"></i>
                                 </a>
                                 <a href="https://wa.me/5555933005901" class="icon">
-                                     <i class="fab fa-whatsapp" width="10px"></i>
+                                    <i class="fab fa-whatsapp" width="10px"></i>
                                 </a>
-                                
-                                                       
-                           </div>
+
+
+                            </div>
                         </div>
                         <div class="testimonial-item text-center">
-                            
+
                             <h5 class="mb-1">Extras</h5>
                             <h6> Faça uma doação</h6>
-                           <p> Além de ajudar a manter o projeto Open Source, você poderá deixar qualquer mensagem no site!!
-                        </p>
-                            <a href="https://picpay.me/bruno.leal223" class="btn btn-primary btn-sm mr-2" target="_blank"><i class="fa fa-money" aria-hidden="true"></i></a>
+                            <p> Além de ajudar a manter o projeto Open Source, você poderá deixar qualquer mensagem no
+                                site!!
+                            </p>
+                            <a href="https://picpay.me/bruno.leal223" class="btn btn-primary btn-sm mr-2"
+                                target="_blank"><i class="fa fa-money" aria-hidden="true"></i></a>
                             <h6>Agradecimentos:</h6>
-                            <p class="mb-0">Obrigado <a href="https://github.com/inirey/dashadmin"> Reysekha</a> por ceder a base <br> Layout base by <a href="https://htmlcodex.com">HTML Codex</a> e editado por mim.</p>
+                            <p class="mb-0">Obrigado <a href="https://github.com/inirey/dashadmin"> Reysekha</a> por
+                                ceder a base <br> Layout base by <a href="https://htmlcodex.com">HTML Codex</a> e
+                                editado por mim.</p>
                         </div>
                     </div>
                 </div>
@@ -540,7 +543,7 @@
                             </div>
                         </div>
                     </div>
-             <div class="col-sm-6 col-xl-3">
+                    <div class="col-sm-6 col-xl-3">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-eye faa-tada animated fa-3x text-primary"></i>
                             <div class="ms-3">
@@ -558,7 +561,7 @@
                             </div>
                         </div>
                     </div>
-                 
+
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-times-circle faa-pulse animated fa-3x text-primary"></i>
@@ -583,41 +586,43 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->        <!-- Footer End -->
-  
+        <!-- Footer End -->
+        <!-- Footer End -->
+
     </div>
     <!-- Content End -->
 
 
     <!-- Back to Top -->
- 
+
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 
 
 
-.container:after {
-  background-color: #f2f2f2;
-  content: "";
-  height: 10px;
-  position: absolute;
-  top: 390px;
-  width: 100%;
-}
-.container:hover {
-  transform: scale(0.54);
-}
-.container-inner {
-  clip-path: path(
-    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
-  );
-  position: relative;
-  transform-origin: 50%;
-  top: -200px;
-}
+        .container:after {
+            background-color: #f2f2f2;
+            content: "";
+            height: 10px;
+            position: absolute;
+            top: 390px;
+            width: 100%;
+        }
 
-  /*.icon {
+        .container:hover {
+            transform: scale(0.54);
+        }
+
+        .container-inner {
+            clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+                );
+            position: relative;
+            transform-origin: 50%;
+            top: -200px;
+        }
+
+        /*.icon {
     margin-right: 30px;
     position: position-fixed;
   }
@@ -653,22 +658,28 @@
 
         h4 {
             font-family: 'Prompt', sans-serif;
-/* font-family: 'Roboto', sans-serif; */
+            /* font-family: 'Roboto', sans-serif; */
         }
+
         h3 {
             font-family: 'Prompt', sans-serif;
         }
+
         .fa-money {
 
-color: #089785;
+            color: #089785;
         }
     </style>
     <!-- fontes -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,100&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,100&family=Roboto:ital,wght@1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,300&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,300&family=Roboto:ital,wght@1,700&display=swap"
+        rel="stylesheet">
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -680,8 +691,8 @@ color: #089785;
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script>
-     
-        </script>
+
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
