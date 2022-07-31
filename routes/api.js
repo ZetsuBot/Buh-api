@@ -7,6 +7,18 @@ try {
 } catch (e) {
   console.log('')
 }
+const { tmpdir } = require('os'); /* add this module to your package.json */
+const Crypto = require("crypto") /* add this module to your package.json */
+const path = require('path') /* add this module to your package.json */
+
+const temp = path.join(tmpdir(), `${Crypto.randomBytes(6).readUIntLE(0,6).toString(36)}`)
+
+var download = function(uri, filename, callback){
+  request.head(uri, function(err, res, body){
+    console.log('content-type:', res.headers['content-type']);
+    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+  });
+};
 
 var creator = "Rey"
 var neoxr = "yntkts"
@@ -3155,7 +3167,7 @@ router.get('/wallpaper/satanic', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/cecan2', async (req, res, next) => {
+router.get('/wallpaper/cec2', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3171,13 +3183,13 @@ router.get('/wallpaper/cecan2', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/cogan2', async (req, res, next) => {
+router.get('/wallpaper/cecan2', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
   if (listkey.includes(Apikey)) {
 
-    const cogan2 = JSON.parse(fs.readFileSync(__path + '/data/cogan2.json'));
+    const cogan2 = JSON.parse(fs.readFileSync(__path + '/data/cegan2.json'));
     const randcogan2 = cogan2[Math.floor(Math.random() * cogan2.length)];
     data = await fetch(randcogan2).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/cogan2.jpeg', data)
@@ -3187,6 +3199,27 @@ router.get('/wallpaper/cogan2', async (req, res, next) => {
   }
 })
 
+
+router.get('/textpro/ancient', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const text = req.query.text;
+  
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!text) return res.json(loghandler.nottext)
+  
+  if(listkey.includes(apikey)){
+    zrapi 
+  .textpro("https://textpro.me/3d-golden-ancient-text-effect-online-free-1060.html", [
+    text,
+  ])
+  .then((data) => {
+          var urlnya = data
+          download(urlnya, './tmp/hasilnya.jpg', function(){
+            res.sendFile(path.resolve('./tmp/hasilnya.jpg'))
+        })
+     })
+          }
+});
 router.get('/wallpaper/itachi', async (req, res, next) => {
   var Apikey = req.query.apikey
 
@@ -6105,8 +6138,26 @@ router.get('/textpro/ninjalogo', async (req, res, next) => {
     res.json(loghandler.invalidKey)
   }
 });
+const getBuffer = async (url, options) => {
+	try {
+		options ? options : {}
+		const res = await axios({
+			method: "get",
+			url,
+			headers: {
+				'DNT': 1,
+				'Upgrade-Insecure-Request': 1
+			},
+			...options,
+			responseType: 'arraybuffer'
+		})
+		return res.data
+	} catch (err) {
+		return err
+	}
+}
 
-router.get('/textpro/l', async (req, res, next) => {
+router.get('/textpro/leao', async (req, res, next) => {
 
   const apikey = req.query.apikey;
 
@@ -6122,13 +6173,10 @@ router.get('/textpro/l', async (req, res, next) => {
       .textpro("https://textpro.me/create-lion-logo-mascot-online-938.html", [
         text, text2
       ])
+       
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
-        })
+        texproimg = getBuffer(data)
+       res.sendFile(texproimg)
       })
       .catch((err) => console.log(err));
   } else {
