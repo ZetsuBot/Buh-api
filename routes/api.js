@@ -4852,12 +4852,12 @@ router.get('/textpro/wolf', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/lobo.jpg', function(){
+            res.sendFile(path.resolve('./tmp/lobo.jpg'))
         })
+        
+        
       })
       .catch((err) => console.log(err));
   } else {
@@ -4910,13 +4910,13 @@ router.get('/textpro/wolf2', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/vingadores.jpg', function(){
+            res.sendFile(path.resolve('./tmp/vingadores.jpg'))
         })
-      })
+        })
+        
+      
       .catch((err) => console.log(err));
   } else {
     res.json(loghandler.invalidKey)
@@ -4938,11 +4938,9 @@ router.get('/textpro/harrypotter', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/hp.jpg', function(){
+            res.sendFile(path.resolve('./tmp/hp.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -5190,11 +5188,9 @@ router.get('/textpro/devil', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/devil.jpg', function(){
+            res.sendFile(path.resolve('./tmp/devil.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -5446,11 +5442,9 @@ router.get('/textpro/holograpic', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+      var urlnya = data
+          download(urlnya, './tmp/hl.jpg', function(){
+            res.sendFile(path.resolve('./tmp/hl.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -5838,11 +5832,9 @@ router.get('/textpro/1917', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/1917.jpg', function(){
+            res.sendFile(path.resolve('./tmp/1917.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -5866,11 +5858,9 @@ router.get('/textpro/thunder2', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+      var urlnya = data
+          download(urlnya, './tmp/thunder.jpg', function(){
+            res.sendFile(path.resolve('./tmp/thunder.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -5896,11 +5886,9 @@ router.get('/textpro/space', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/space.jpg', function(){
+            res.sendFile(path.resolve('./tmp/space.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -5924,12 +5912,12 @@ router.get('/textpro/joker', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        
+       var urlnya = data
+          download(urlnya, './tmp/joker.jpg', function(){
+            res.sendFile(path.resolve('./tmp/joker.jpg'))
         })
+        
       })
       .catch((err) => console.log(err));
   } else {
@@ -6126,13 +6114,12 @@ router.get('/textpro/ninjalogo', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+     var urlnya = data
+          download(urlnya, './tmp/ninja.jpg', function(){
+            res.sendFile(path.resolve('./tmp/ninja.jpg'))
         })
-      })
+        })
+    
       .catch((err) => console.log(err));
   } else {
     res.json(loghandler.invalidKey)
@@ -6201,13 +6188,12 @@ router.get('/textpro/vingadores', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+     var urlnya = data
+          download(urlnya, './tmp/vingadores.jpg', function(){
+            res.sendFile(path.resolve('./tmp/vingadores.jpg'))
         })
-      })
+        })
+      
       .catch((err) => console.log(err));
   } else {
     res.json(loghandler.invalidKey)
@@ -6231,11 +6217,10 @@ router.get('/textpro/marvel', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+   
+      var urlnya = data
+          download(urlnya, './tmp/marvel.jpg', function(){
+            res.sendFile(path.resolve('./tmp/marvel.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6259,11 +6244,9 @@ router.get('/textpro/batman', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/batman.jpg', function(){
+            res.sendFile(path.resolve('./tmp/batman.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6289,11 +6272,9 @@ router.get('/textpro/vingadores', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+    var urlnya = data
+          download(urlnya, './tmp/vingadores.jpg', function(){
+            res.sendFile(path.resolve('./tmp/vingadores.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6318,11 +6299,9 @@ router.get('/textpro/thor', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/thor.jpg', function(){
+            res.sendFile(path.resolve('./tmp/thor.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6347,11 +6326,9 @@ router.get('/textpro/capitaoamerica', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+      var urlnya = data
+          download(urlnya, './tmp/capitao.jpg', function(){
+            res.sendFile(path.resolve('./tmp/capitao.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6437,11 +6414,9 @@ router.get('/textpro/wolf', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+       var urlnya = data
+          download(urlnya, './tmp/wolf.jpg', function(){
+            res.sendFile(path.resolve('./tmp/wolf.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6492,11 +6467,9 @@ router.get('/textpro/blackpink', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/bp.jpg', function(){
+            res.sendFile(path.resolve('./tmp/bp.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6520,11 +6493,9 @@ router.get('/textpro/urso', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/urso.jpg', function(){
+            res.sendFile(path.resolve('./tmp/urso.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6547,11 +6518,9 @@ router.get('/textpro/verao', async (req, res, next) => {
         text,
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+        var urlnya = data
+          download(urlnya, './tmp/verao.jpg', function(){
+            res.sendFile(path.resolve('./tmp/verao.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6661,11 +6630,9 @@ router.get('/textpro/pornhub', async (req, res, next) => {
         text, text2
       ])
       .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
+    var urlnya = data
+          download(urlnya, './tmp/phub.jpg', function(){
+            res.sendFile(path.resolve('./tmp/phub.jpg'))
         })
       })
       .catch((err) => console.log(err));
@@ -6674,35 +6641,7 @@ router.get('/textpro/pornhub', async (req, res, next) => {
   }
 });
 
-router.get('/textpro/capitaoamerica', async (req, res, next) => {
-
-  const apikey = req.query.apikey;
-
-  const text = req.query.text1;
-  const text2 = req.query.text2;
-
-  if (!apikey) return res.json(loghandler.notparam)
-  if (!text) return res.json(loghandler.nottext1)
-  if (!text2) return res.json(loghandler.nottext2)
-
-  if (listkey.includes(apikey)) {
-    zrapi
-      .textpro("https://textpro.me/create-a-captain-america-text-effect-free-online-1039.html", [
-        text, text2
-      ])
-      .then((data) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado: data
-        })
-      })
-      .catch((err) => console.log(err));
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-});
+     
 
 /*
 @AKHIR TEXTPRO ME
