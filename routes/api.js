@@ -2797,7 +2797,7 @@ router.get('/anime/isuzu', async (req, res, next) => {
   }
 })
 
-router.get('/random/cosplay', async (req, res, next) => {
+router.get('/anime/cosplay', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
