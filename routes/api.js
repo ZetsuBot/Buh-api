@@ -1344,124 +1344,8 @@ router.get('/stalk/npm', async (req, res, next) => {
   }
 })
 
-router.get('/random/faktaunik', async (req, res, next) => {
-  var Apikey = req.query.apikey
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/random/text/faktaunik`))
-      .then(response => response.json())
-      .then(hasil => {
-        var resultado = hasil.result;
-        res.json({
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/random/katabijak', async (req, res, next) => {
-  var Apikey = req.query.apikey
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/random/text/katabijak`))
-      .then(response => response.json())
-      .then(hasil => {
-        var resultado = hasil.result;
-        res.json({
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/random/pantun', async (req, res, next) => {
-  var Apikey = req.query.apikey
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/random/text/pantun`))
-      .then(response => response.json())
-      .then(hasil => {
-        var resultado = hasil.result;
-        res.json({
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/random/fancytext', async (req, res, next) => {
-  var Apikey = req.query.apikey
-  text = req.query.text
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (!text) return res.json(loghandler.nottext)
-  if (listkey.includes(Apikey)) {
-
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/random/text/fancytext?text=${text}`))
-      .then(response => response.json())
-      .then(hasil => {
-        var resultado = hasil.result;
-        res.json({
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/random/quotes', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/random/text/quotes`))
-      .then(response => response.json())
-      .then(hasil => {
-        var resultado = hasil.result;
-        res.json({
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-
 router.get('/jadwal-bioskop', async (req, res, next) => {
   var Apikey = req.query.apikey
-
   if (!Apikey) return res.json(loghandler.notparam)
   if (listkey.includes(Apikey)) {
     const { default: Axios } = require('axios')
@@ -2463,7 +2347,7 @@ router.get('/nsfw/zettai', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/keneki', async (req, res, next) => {
+router.get('/anime/keneki', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2479,7 +2363,7 @@ router.get('/wallpaper/keneki', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/megumin', async (req, res, next) => {
+router.get('/anime/megumin', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2495,7 +2379,7 @@ router.get('/wallpaper/megumin', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/yotsuba', async (req, res, next) => {
+router.get('/anime/yotsuba', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2511,7 +2395,7 @@ router.get('/wallpaper/yotsuba', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/shinomiya', async (req, res, next) => {
+router.get('/anime/shinomiya', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2527,7 +2411,7 @@ router.get('/wallpaper/shinomiya', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/yumeko', async (req, res, next) => {
+router.get('/anime/yumeko', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2543,7 +2427,7 @@ router.get('/wallpaper/yumeko', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/tejina', async (req, res, next) => {
+router.get('/anime/tejina', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2559,7 +2443,7 @@ router.get('/wallpaper/tejina', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/chiho', async (req, res, next) => {
+router.get('/anime/chiho', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2607,22 +2491,6 @@ router.get('/wallpaper/gaming', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/islami', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const islami = JSON.parse(fs.readFileSync(__path + '/data/Islamic.json'));
-    const randislami = islami[Math.floor(Math.random() * islami.length)];
-    data = await fetch(randislami).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/islami.jpeg', data)
-    res.sendFile(__path + '/tmp/islami.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
 router.get('/wallpaper/programing', async (req, res, next) => {
   var Apikey = req.query.apikey
 
@@ -2639,7 +2507,7 @@ router.get('/wallpaper/programing', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/teknologi', async (req, res, next) => {
+router.get('/wallpaper/wallpapertec', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2671,87 +2539,9 @@ router.get('/wallpaper/mountain', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/tatasurya', async (req, res, next) => {
-  var Apikey = req.query.apikey
 
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
 
-    const tatasurya = JSON.parse(fs.readFileSync(__path + '/data/tatasurya.json'));
-    const randtatasurya = tatasurya[Math.floor(Math.random() * tatasurya.length)];
-    data = await fetch(randtatasurya).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/tatasurya.jpeg', data)
-    res.sendFile(__path + '/tmp/tatasurya.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/kartun', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const kartun = JSON.parse(fs.readFileSync(__path + '/data/kartun.json'));
-    const randkartun = kartun[Math.floor(Math.random() * kartun.length)];
-    data = await fetch(randkartun).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/kartun.jpeg', data)
-    res.sendFile(__path + '/tmp/kartun.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/random/yuli', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const yuli = JSON.parse(fs.readFileSync(__path + '/data/yulibocil.json'));
-    const randyuli = yuli[Math.floor(Math.random() * yuli.length)];
-    data = await fetch(randyuli).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/yuli.jpeg', data)
-    res.sendFile(__path + '/tmp/yuli.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/pentol', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const pentol = JSON.parse(fs.readFileSync(__path + '/data/pentol.json'));
-    const randpentol = pentol[Math.floor(Math.random() * pentol.length)];
-    data = await fetch(randpentol).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/pentol.jpeg', data)
-    res.sendFile(__path + '/tmp/pentol.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/katakata', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const katakata = JSON.parse(fs.readFileSync(__path + '/data/katakata.json'));
-    const randkatakata = katakata[Math.floor(Math.random() * katakata.length)];
-    data = await fetch(randkatakata).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/katakata.jpeg', data)
-    res.sendFile(__path + '/tmp/katakata.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/toukachan', async (req, res, next) => {
+router.get('/anime/toukachan', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2767,7 +2557,7 @@ router.get('/wallpaper/toukachan', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/akira', async (req, res, next) => {
+router.get('/anime/akira', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2783,7 +2573,7 @@ router.get('/wallpaper/akira', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/itori', async (req, res, next) => {
+router.get('/anime/itori', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2799,7 +2589,7 @@ router.get('/wallpaper/itori', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kurumi', async (req, res, next) => {
+router.get('/anime/kurumi', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2815,7 +2605,7 @@ router.get('/wallpaper/kurumi', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/miku', async (req, res, next) => {
+router.get('/anime/miku', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2831,7 +2621,7 @@ router.get('/wallpaper/miku', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/pokemon', async (req, res, next) => {
+router.get('/anime/pokemon', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2847,7 +2637,7 @@ router.get('/wallpaper/pokemon', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/ryujin', async (req, res, next) => {
+router.get('/anime/ryujin', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2863,7 +2653,7 @@ router.get('/wallpaper/ryujin', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/rose', async (req, res, next) => {
+router.get('/anime/rose', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2879,7 +2669,7 @@ router.get('/wallpaper/rose', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kaori', async (req, res, next) => {
+router.get('/anime/kaori', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2895,7 +2685,7 @@ router.get('/wallpaper/kaori', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/shizuka', async (req, res, next) => {
+router.get('/anime/shizuka', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2911,7 +2701,7 @@ router.get('/wallpaper/shizuka', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kaga', async (req, res, next) => {
+router.get('/anime/kaga', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2927,7 +2717,7 @@ router.get('/wallpaper/kaga', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kotori', async (req, res, next) => {
+router.get('/anime/kotori', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2943,7 +2733,7 @@ router.get('/wallpaper/kotori', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/mikasa', async (req, res, next) => {
+router.get('/anime/mikasa', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2959,7 +2749,7 @@ router.get('/wallpaper/mikasa', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/akiyama', async (req, res, next) => {
+router.get('/anime/akiyama', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2975,7 +2765,7 @@ router.get('/wallpaper/akiyama', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/gremory', async (req, res, next) => {
+router.get('/anime/gremory', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -2991,7 +2781,7 @@ router.get('/wallpaper/gremory', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/isuzu', async (req, res, next) => {
+router.get('/anime/isuzu', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3023,7 +2813,7 @@ router.get('/random/cosplay', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/shina', async (req, res, next) => {
+router.get('/anime/shina', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3039,7 +2829,7 @@ router.get('/wallpaper/shina', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kagura', async (req, res, next) => {
+router.get('/anime/kagura', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3055,7 +2845,7 @@ router.get('/wallpaper/kagura', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/shinka', async (req, res, next) => {
+router.get('/anime/shinka', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3071,7 +2861,7 @@ router.get('/wallpaper/shinka', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/eba', async (req, res, next) => {
+router.get('/anime/eba', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3087,7 +2877,7 @@ router.get('/wallpaper/eba', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/deidara', async (req, res, next) => {
+router.get('/anime/deidara', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3103,23 +2893,9 @@ router.get('/wallpaper/deidara', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/trans', async (req, res, next) => {
-  var Apikey = req.query.apikey
 
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
 
-    const trans = JSON.parse(fs.readFileSync(__path + '/data/trans.json'));
-    const randtrans = trans[Math.floor(Math.random() * trans.length)];
-    data = await fetch(randtrans).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/trans.jpeg', data)
-    res.sendFile(__path + '/tmp/trans.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/jeni', async (req, res, next) => {
+router.get('/anime/jeni', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3135,21 +2911,6 @@ router.get('/wallpaper/jeni', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/jiso', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const jiso = JSON.parse(fs.readFileSync(__path + '/data/jiso.json'));
-    const randjiso = jiso[Math.floor(Math.random() * jiso.length)];
-    data = await fetch(randjiso).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/jiso.jpeg', data)
-    res.sendFile(__path + '/tmp/jiso.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
 
 router.get('/wallpaper/satanic', async (req, res, next) => {
   var Apikey = req.query.apikey
@@ -3167,60 +2928,9 @@ router.get('/wallpaper/satanic', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/cec2', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const cecan2 = JSON.parse(fs.readFileSync(__path + '/data/cecan2.json'));
-    const randcecan2 = cecan2[Math.floor(Math.random() * cecan2.length)];
-    data = await fetch(randcecan2).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/cecan2.jpeg', data)
-    res.sendFile(__path + '/tmp/cecan2.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/cecan2', async (req, res, next) => {
-  var Apikey = req.query.apikey
-
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const cogan2 = JSON.parse(fs.readFileSync(__path + '/data/cegan2.json'));
-    const randcogan2 = cogan2[Math.floor(Math.random() * cogan2.length)];
-    data = await fetch(randcogan2).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/cogan2.jpeg', data)
-    res.sendFile(__path + '/tmp/cogan2.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
 
 
-router.get('/textpro/ancient', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  const text = req.query.text;
-  
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!text) return res.json(loghandler.nottext)
-  
-  if(listkey.includes(apikey)){
-    zrapi 
-  .textpro("https://textpro.me/3d-golden-ancient-text-effect-online-free-1060.html", [
-    text,
-  ])
-  .then((data) => {
-          var urlnya = data
-          download(urlnya, './tmp/hasilnya.jpg', function(){
-            res.sendFile(path.resolve('./tmp/hasilnya.jpg'))
-        })
-     })
-          }
-});
-router.get('/wallpaper/itachi', async (req, res, next) => {
+router.get('/anime/itachi', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3236,7 +2946,7 @@ router.get('/wallpaper/itachi', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/madara', async (req, res, next) => {
+router.get('/anime/madara', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3252,7 +2962,7 @@ router.get('/wallpaper/madara', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/yuki', async (req, res, next) => {
+router.get('/anime/yuki', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3284,7 +2994,7 @@ router.get('/wallpaper/asuna', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/ayuzawa', async (req, res, next) => {
+router.get('/anime/ayuzawa', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3300,7 +3010,7 @@ router.get('/wallpaper/ayuzawa', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/chitoge', async (req, res, next) => {
+router.get('/anime/chitoge', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3316,7 +3026,7 @@ router.get('/wallpaper/chitoge', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/emilia', async (req, res, next) => {
+router.get('/anime/emilia', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3332,7 +3042,7 @@ router.get('/wallpaper/emilia', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/hestia', async (req, res, next) => {
+router.get('/anime/hestia', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3348,7 +3058,7 @@ router.get('/wallpaper/hestia', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/inori', async (req, res, next) => {
+router.get('/anime/inori', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3364,7 +3074,7 @@ router.get('/wallpaper/inori', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/ana', async (req, res, next) => {
+router.get('/anime/ana', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3380,7 +3090,7 @@ router.get('/wallpaper/ana', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/boruto', async (req, res, next) => {
+router.get('/anime/boruto', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3396,7 +3106,7 @@ router.get('/wallpaper/boruto', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/erza', async (req, res, next) => {
+router.get('/anime/erza', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3412,7 +3122,7 @@ router.get('/wallpaper/erza', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kakasih', async (req, res, next) => {
+router.get('/anime/kakasih', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3428,7 +3138,7 @@ router.get('/wallpaper/kakasih', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/sagiri', async (req, res, next) => {
+router.get('/anime/sagiri', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3444,7 +3154,7 @@ router.get('/wallpaper/sagiri', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/minato', async (req, res, next) => {
+router.get('/anime/minato', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3460,7 +3170,7 @@ router.get('/wallpaper/minato', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/naruto', async (req, res, next) => {
+router.get('/anime/naruto', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3476,7 +3186,7 @@ router.get('/wallpaper/naruto', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/nezuko', async (req, res, next) => {
+router.get('/anime/nezuko', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3492,7 +3202,7 @@ router.get('/wallpaper/nezuko', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/onepiece', async (req, res, next) => {
+router.get('/anime/onepiece', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3508,7 +3218,7 @@ router.get('/wallpaper/onepiece', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/rize', async (req, res, next) => {
+router.get('/anime/rize', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3524,7 +3234,7 @@ router.get('/wallpaper/rize', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/sakura', async (req, res, next) => {
+router.get('/anime/sakura', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3540,7 +3250,7 @@ router.get('/wallpaper/sakura', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/sasuke', async (req, res, next) => {
+router.get('/anime/sasuke', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3556,7 +3266,7 @@ router.get('/wallpaper/sasuke', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/tsunade', async (req, res, next) => {
+router.get('/anime/tsunade', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3572,7 +3282,7 @@ router.get('/wallpaper/tsunade', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/montor', async (req, res, next) => {
+router.get('/anime/montor', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3588,7 +3298,7 @@ router.get('/wallpaper/montor', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/mobil', async (req, res, next) => {
+router.get('/anime/mobil', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3604,23 +3314,8 @@ router.get('/wallpaper/mobil', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/boneka-chucky', async (req, res, next) => {
-  var Apikey = req.query.apikey
 
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const Bon = JSON.parse(fs.readFileSync(__path + '/data/boneka.json'));
-    const randBon = Bon[Math.floor(Math.random() * Bon.length)];
-    data = await fetch(randBon).then(v => v.buffer());
-    await fs.writeFileSync(__path + '/tmp/chucky.jpeg', data)
-    res.sendFile(__path + '/tmp/chucky.jpeg');
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/anime', async (req, res, next) => {
+router.get('/anime/anime', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3636,23 +3331,8 @@ router.get('/wallpaper/anime', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/random/blackpink', async (req, res, next) => {
-  var Apikey = req.query.apikey
 
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    Black = JSON.parse(fs.readFileSync(__path + '/data/blackpink.json'));
-    const randBlack = Black[Math.floor(Math.random() * Black.length)]
-    data = await fetch(randBlack).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/blak.jpeg', data)
-    res.sendFile(__path + '/tmp/blak.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/wallhp', async (req, res, next) => {
+router.get('/anime/wallhp', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3668,7 +3348,7 @@ router.get('/wallpaper/wallhp', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/waifu2', async (req, res, next) => {
+router.get('/anime/waifu2', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3684,7 +3364,7 @@ router.get('/wallpaper/waifu2', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/waifu', async (req, res, next) => {
+router.get('/anime/waifu', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3700,23 +3380,8 @@ router.get('/wallpaper/waifu', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kpop', async (req, res, next) => {
-  var Apikey = req.query.apikey
 
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    Kpop = JSON.parse(fs.readFileSync(__path + '/data/kpop.json'));
-    const randKpop = Kpop[Math.floor(Math.random() * Kpop.length)]
-    data = await fetch(randKpop).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/kpop.jpeg', data)
-    res.sendFile(__path + '/tmp/kpop.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/wallpaper/hekel', async (req, res, next) => {
+router.get('/anime/hekel', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3732,7 +3397,7 @@ router.get('/wallpaper/hekel', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/kucing', async (req, res, next) => {
+router.get('/anime/kucing', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3796,7 +3461,7 @@ router.get('/wallpaper/anjing', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/doraemon', async (req, res, next) => {
+router.get('/anime/doraemon', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3812,24 +3477,8 @@ router.get('/wallpaper/doraemon', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/cogan', async (req, res, next) => {
-  var Apikey = req.query.apikey
 
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    Cogan = JSON.parse(fs.readFileSync(__path + '/data/cogan.json'));
-    const randCogan = Cogan[Math.floor(Math.random() * Cogan.length)]
-    data = await fetch(randCogan).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/cogan.jpeg', data)
-    res.sendFile(__path + '/tmp/cogan.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-
-router.get('/wallpaper/elaina', async (req, res, next) => {
+router.get('/anime/elaina', async (req, res, next) => {
   const Apikey = req.query.apikey;
   if (!Apikey) return res.json(loghandler.notparam)
   if (listkey.includes(Apikey)) {
@@ -3846,7 +3495,7 @@ router.get('/wallpaper/elaina', async (req, res, next) => {
 })
 
 
-router.get('/wallpaper/loli', async (req, res, next) => {
+router.get('/anime/loli', async (req, res, next) => {
   const Apikey = req.query.apikey;
   if (!Apikey) return res.json(loghandler.notparam)
   if (listkey.includes(Apikey)) {
@@ -3863,7 +3512,7 @@ router.get('/wallpaper/loli', async (req, res, next) => {
 })
 
 
-router.get('/wallpaper/yuri', async (req, res, next) => {
+router.get('/anime/yuri', async (req, res, next) => {
   const Apikey = req.query.apikey;
   if (!Apikey) return res.json(loghandler.notparam)
   if (listkey.includes(Apikey)) {
@@ -3880,7 +3529,7 @@ router.get('/wallpaper/yuri', async (req, res, next) => {
 })
 
 
-router.get('/wallpaper/cecan', async (req, res, next) => {
+router.get('/anime/cecan', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3914,24 +3563,8 @@ router.get('/wallpaper/aesthetic', async (req, res, next) => {
 })
 
 
-router.get('/wallpaper/justina', async (req, res, next) => {
-  var Apikey = req.query.apikey
 
-  if (!Apikey) return res.json(loghandler.notparam)
-  if (listkey.includes(Apikey)) {
-
-    const Justina = JSON.parse(fs.readFileSync(__path + '/data/justina.json'));
-    const randJus = Justina[Math.floor(Math.random() * Justina.length)];
-    data = await fetch(randJus).then(v => v.buffer())
-    await fs.writeFileSync(__path + '/tmp/justina.jpeg', data)
-    res.sendFile(__path + '/tmp/justina.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-
-router.get('/wallpaper/sagiri', async (req, res, next) => {
+router.get('/anime/sagiri', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3947,7 +3580,7 @@ router.get('/wallpaper/sagiri', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/shota', async (req, res, next) => {
+router.get('/anime/shota', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3963,7 +3596,7 @@ router.get('/wallpaper/shota', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/nsfwloli', async (req, res, next) => {
+router.get('/anime/nsfwloli', async (req, res, next) => {
   var Apikey = req.query.apikey
 
   if (!Apikey) return res.json(loghandler.notparam)
@@ -3979,7 +3612,7 @@ router.get('/wallpaper/nsfwloli', async (req, res, next) => {
   }
 })
 
-router.get('/wallpaper/hinata', async (req, res, next) => {
+router.get('/anime/hinata', async (req, res, next) => {
   var Apikey = req.query.apikey
   if (!Apikey) return res.json(loghandler.notparam)
   if (listkey.includes(Apikey)) {
