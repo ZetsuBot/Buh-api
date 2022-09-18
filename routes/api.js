@@ -2912,6 +2912,22 @@ router.get('/anime/jeni', async (req, res, next) => {
 })
 
 
+router.get('/random/meme', async (req, res, next) => {
+  var Apikey = req.query.apikey
+
+  if (!Apikey) return res.json(loghandler.notparam)
+  if (listkey.includes(Apikey)) {
+
+    const meme = JSON.parse(fs.readFileSync(__path + '/data/meme.json'));
+    const randmeme = meme[Math.floor(Math.random() * meme.length)];
+    data = await fetch(randmeme).then(v => v.buffer())
+    await fs.writeFileSync(__path + '/tmp/meme.jpeg', data)
+    res.sendFile(__path + '/tmp/meme.jpeg')
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
+
 router.get('/wallpaper/satanic', async (req, res, next) => {
   var Apikey = req.query.apikey
 
