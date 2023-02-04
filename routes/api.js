@@ -342,13 +342,8 @@ router.get('/download/ytmp3', async (req, res, next) => {
   if (!apikey) return res.json(loghandler.notparam)
   if (listkey.includes(apikey)) {
     ytDonlodMp3(url)
-      .then((resultado) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado
-        })
+      .then((result) => {
+        res.json(result);
       })
       .catch((error) => {
         console.log(error)
@@ -367,13 +362,8 @@ router.get('/download/ytmp4', async (req, res, next) => {
   if (!apikey) return res.json(loghandler.notparam)
   if (listkey.includes(apikey)) {
     ytDonlodMp4(url)
-      .then((resultado) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado
-        })
+      .then((result) => {
+        res.json(result);
       })
       .catch((error) => {
         res.json(error)
