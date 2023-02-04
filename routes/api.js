@@ -11,6 +11,14 @@ const { tmpdir } = require('os'); /* add this module to your package.json */
 const Crypto = require("crypto") /* add this module to your package.json */
 const path = require('path') /* add this module to your package.json */
 
+
+
+
+const listkey = ["apirey", "clover", "ditofficial"];
+
+
+
+
 const temp = path.join(tmpdir(), `${Crypto.randomBytes(6).readUIntLE(0,6).toString(36)}`)
 
 var download = function(uri, filename, callback){
@@ -240,7 +248,7 @@ Akhir Pesan Error
 
 //router.use(favicon(__path + "/views/favicon.ico"));
 
-const listkey = ["apirey", "APIKEY", "ditofficial"];
+
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
@@ -251,7 +259,7 @@ router.post("/apikey", async (req, res, next) => {
   } else {
     listkey.push(key);
     res.json({
-      mensagem: `Apikey egistrada com sucesso: ${key}`
+      mensagem: `Apikey registrada com sucesso: ${key}`
     });
   }
 });
