@@ -1,8 +1,18 @@
-/********** Template CSS **********/
+/********** Template CSS *********
+Letra 
+6C7293
+
+[6/2 20:14] Clover: EB1616
+[6/2 20:14] Clover: Red
+[6/2 20:28] Clover: Letra 
+6C7293
+[6/2 20:28] Clover: 6c757d
+*/
 :root {
-    --primary: #EB1616;
+   /* azulzin */
+    --primary: #07e8d9;
     --secondary: #191C24;
-    --light: #6C7293;
+    --light: #07e8d2;
     --dark: #000000;
 }
 
@@ -79,7 +89,7 @@
 .content {
     margin-left: 250px;
     min-height: 100vh;
-    background: var(--dark);
+    background: rgba(000,000,000 , 0.4);
     transition: 0.5s;
 }
 
@@ -131,7 +141,7 @@
 .sidebar .navbar .navbar-nav .nav-link:hover,
 .sidebar .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
-    background: var(--dark);
+    background: rgba(000,000,000 , 0.4);
     border-color: rgba(000,000,000 , 0.4);
 }
 
@@ -141,13 +151,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--secondary);
+    background: rgba(000,000,000 , 0.4);
     border-radius: 40px;
 }
 
 .sidebar .navbar .navbar-nav .nav-link:hover i,
 .sidebar .navbar .navbar-nav .nav-link.active i {
-    background: var(--secondary);
+    background: rgba(000,000,000 , 0.4);
 }
 
 .sidebar .navbar .dropdown-toggle::after {
@@ -196,7 +206,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--secondary);
+    background: rgba(000,000,000 , 0.4);
     border-radius: 40px;
 }
 
@@ -206,7 +216,7 @@
 
 .content .navbar .dropdown-item:hover,
 .content .navbar .dropdown-item.active {
-    background: var(--secondary);
+    background: rgba(000,000,000 , 0.4);
 }
 
 .content .navbar .dropdown-toggle::after {
@@ -254,7 +264,7 @@
 }
 
 .bootstrap-datetimepicker-widget table td.today::before {
-    border-bottom-color: rgba(000,000,000 , 0.4);;
+    border-bottom-color: rgba(000,000,000 , 0.4);
 }
 
 
