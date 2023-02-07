@@ -2,7 +2,6 @@ const { default: Axios } = require('axios')
 const cheerio = require('cheerio')
 const qs = require('qs')
 const FormData = require('form-data')
-const tiny = require("tinyurl")
 
 function ssstik(url) {
      return new Promise((resolve, reject) => {
