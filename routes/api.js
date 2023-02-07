@@ -11,10 +11,12 @@ const { tmpdir } = require('os'); /* add this module to your package.json */
 const Crypto = require("crypto") /* add this module to your package.json */
 const path = require('path') /* add this module to your package.json */
 
+var tiktok = require(__path + '/database/index.js');
+
+var pin = require(__path + '/database/pinterest.js');
 
 
-
-const listkey = ["apirey", "clover", "ditofficial"];
+const listkey = ["sophia", "clover", "ditofficial"];
 
 
 
@@ -392,6 +394,23 @@ router.get("/yt/playmp3", async (req, res, next) => {
   }
 });
 
+router.get("/download/pinterest", async (req, res, next) => {
+  const query = req.query.query;
+  const apikey = req.query.apikey;
+  if (!query) return res.json(loghandler.notquery)
+  if (!apikey) return res.json(loghandler.notparam)
+  if (listkey.includes(apikey)) {
+    pin.pinterest(query)
+        .then(result => {
+         res.json(result)
+    }).catch((error) => {
+        res.json(error);
+      });
+     } else {
+        res.json(loghandler.invalidKey)
+     }
+   });
+
 router.get("/yt/playmp4", async (req, res, next) => {
 
   const query = req.query.query;
@@ -445,17 +464,15 @@ router.get('/download/tiktok', async (req, res, next) => {
   if (!Apikey) return res.json(loghandler.notparam)
   if (listkey.includes(Apikey)) {
     if (!url) return res.json(loghandler.noturl)
-    TiktokDownloader(`${url}`)
-      .then(data => {
-        var resultado = data.result;
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch((error) => {
+    const slider_url = 'https://vt.tiktok.com/ZS8e1HeEs/'
+    tiktok.tiklydown(url)
+        .then(result => {
+          //var music = result.music
+        //  var video = result.video
+          res.json({
+             result
+          })
+    }).catch((error) => {
         res.json(error);
       });
   } else {
