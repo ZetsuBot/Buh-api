@@ -16,7 +16,7 @@ var tiktok = require(__path + '/database/index.js');
 var pin = require(__path + '/database/pinterest.js');
 
 
-const listkey = ["sophia", "clover", "ditofficial"];
+const listkey = ["sophia", "clover", "frost"];
 
 
 
@@ -30,7 +30,7 @@ var download = function(uri, filename, callback){
   });
 };
 
-var creator = "Rey"
+var creator = "CM"
 var neoxr = "yntkts"
 var zeks = "administrator"
 var zeks2 = "apivinz"
@@ -1972,7 +1972,9 @@ router.get('/nsfw/ahegao', async (req, res, next) => {
     const randahegao = ahegao[Math.floor(Math.random() * ahegao.length)];
     data = await fetch(randahegao).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ahegao.jpeg', data)
-    res.sendFile(__path + '/tmp/ahegao.jpeg')
+    res.json({
+      url: `${randahegao}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -1988,7 +1990,9 @@ router.get('/nsfw/ass', async (req, res, next) => {
     const randass = ass[Math.floor(Math.random() * ass.length)];
     data = await fetch(randass).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ass.jpeg', data)
-    res.sendFile(__path + '/tmp/ass.jpeg')
+    res.json({
+      url: `${randass}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2004,7 +2008,9 @@ router.get('/nsfw/bdsm', async (req, res, next) => {
     const randbdsm = bdsm[Math.floor(Math.random() * bdsm.length)];
     data = await fetch(randbdsm).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/bdsm.jpeg', data)
-    res.sendFile(__path + '/tmp/bdsm.jpeg')
+    res.json({
+      url: `${randbdsm}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2020,7 +2026,9 @@ router.get('/nsfw/blowjob', async (req, res, next) => {
     const randblowjob = blowjob[Math.floor(Math.random() * blowjob.length)];
     data = await fetch(randblowjob).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/blowjob.jpeg', data)
-    res.sendFile(__path + '/tmp/blowjob.jpeg')
+    res.json({
+      url: `${randblowjob}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2036,7 +2044,9 @@ router.get('/nsfw/cuckold', async (req, res, next) => {
     const randcuckold = cuckold[Math.floor(Math.random() * cuckold.length)];
     data = await fetch(randcuckold).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/cuckold.jpeg', data)
-    res.sendFile(__path + '/tmp/cuckold.jpeg')
+    res.json({
+      url: `${randcuckold}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2052,7 +2062,9 @@ router.get('/nsfw/cum', async (req, res, next) => {
     const randcum = cum[Math.floor(Math.random() * cum.length)];
     data = await fetch(randcum).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/cum.jpeg', data)
-    res.sendFile(__path + '/tmp/cum.jpeg')
+    res.json({
+      url: `${randcum}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2068,7 +2080,9 @@ router.get('/nsfw/ero', async (req, res, next) => {
     const randero = ero[Math.floor(Math.random() * ero.length)];
     data = await fetch(randero).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ero.jpeg', data)
-    res.sendFile(__path + '/tmp/ero.jpeg')
+    res.json({
+      url: `${randero}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2084,7 +2098,9 @@ router.get('/nsfw/femdom', async (req, res, next) => {
     const randfemdom = femdom[Math.floor(Math.random() * femdom.length)];
     data = await fetch(randfemdom).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/femdom.jpeg', data)
-    res.sendFile(__path + '/tmp/femdom.jpeg')
+    res.json({
+      url: `${randfemdom}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2100,7 +2116,9 @@ router.get('/nsfw/foot', async (req, res, next) => {
     const randfoot = foot[Math.floor(Math.random() * foot.length)];
     data = await fetch(randfoot).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/foot.jpeg', data)
-    res.sendFile(__path + '/tmp/foot.jpeg')
+    res.json({
+      url: `${randfoot}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2116,7 +2134,9 @@ router.get('/nsfw/gangbang', async (req, res, next) => {
     const randgangbang = gangbang[Math.floor(Math.random() * gangbang.length)];
     data = await fetch(randgangbang).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/gangbang.jpeg', data)
-    res.sendFile(__path + '/tmp/gangbang.jpeg')
+    res.json({
+      url: `${randgangbang}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2132,7 +2152,9 @@ router.get('/nsfw/glasses', async (req, res, next) => {
     const randglasses = glasses[Math.floor(Math.random() * glasses.length)];
     data = await fetch(randglasses).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/glasses.jpeg', data)
-    res.sendFile(__path + '/tmp/glasses.jpeg')
+    res.json({
+      url: `${randglasses}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2148,7 +2170,9 @@ router.get('/nsfw/hentai', async (req, res, next) => {
     const randhentai = hentai[Math.floor(Math.random() * hentai.length)];
     data = await fetch(randhentai).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/hentai.jpeg', data)
-    res.sendFile(__path + '/tmp/hentai.jpeg')
+    res.json({
+      url: `${randhentai}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2164,7 +2188,9 @@ router.get('/nsfw/gifs', async (req, res, next) => {
     const randgifs = gifs[Math.floor(Math.random() * gifs.length)];
     data = await fetch(randgifs).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/gifs.jpeg', data)
-    res.sendFile(__path + '/tmp/gifs.jpeg')
+    res.json({
+      url: `${randgifs}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2180,7 +2206,9 @@ router.get('/nsfw/jahy', async (req, res, next) => {
     const randjahy = jahy[Math.floor(Math.random() * jahy.length)];
     data = await fetch(randjahy).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/jahy.jpeg', data)
-    res.sendFile(__path + '/tmp/jahy.jpeg')
+    res.json({
+      url: `${randjahy}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2196,7 +2224,9 @@ router.get('/nsfw/manga', async (req, res, next) => {
     const randmanga = manga[Math.floor(Math.random() * manga.length)];
     data = await fetch(randmanga).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/manga.jpeg', data)
-    res.sendFile(__path + '/tmp/manga.jpeg')
+    res.json({
+      url: `${randmanga}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2212,7 +2242,9 @@ router.get('/nsfw/masturbation', async (req, res, next) => {
     const randmasturbation = masturbation[Math.floor(Math.random() * masturbation.length)];
     data = await fetch(randmasturbation).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/masturbation.jpeg', data)
-    res.sendFile(__path + '/tmp/masturbation.jpeg')
+    res.json({
+      url: `${randmasturbation}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2228,7 +2260,9 @@ router.get('/nsfw/neko', async (req, res, next) => {
     const randneko = neko[Math.floor(Math.random() * neko.length)];
     data = await fetch(randneko).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/neko.jpeg', data)
-    res.sendFile(__path + '/tmp/neko.jpeg')
+    res.json({
+      url: `${randneko}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2244,7 +2278,9 @@ router.get('/nsfw/orgy', async (req, res, next) => {
     const randorgy = orgy[Math.floor(Math.random() * orgy.length)];
     data = await fetch(randorgy).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/orgy.jpeg', data)
-    res.sendFile(__path + '/tmp/orgy.jpeg')
+    res.json({
+      url: `${randorgy}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2260,7 +2296,9 @@ router.get('/nsfw/panties', async (req, res, next) => {
     const randpanties = panties[Math.floor(Math.random() * panties.length)];
     data = await fetch(randpanties).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/panties.jpeg', data)
-    res.sendFile(__path + '/tmp/panties.jpeg')
+    res.json({
+      url: `${randpanties}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2276,7 +2314,9 @@ router.get('/nsfw/pussy', async (req, res, next) => {
     const randpussy = pussy[Math.floor(Math.random() * pussy.length)];
     data = await fetch(randpussy).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/pussy.jpeg', data)
-    res.sendFile(__path + '/tmp/pussy.jpeg')
+    res.json({
+      url: `${randpussy}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2292,7 +2332,9 @@ router.get('/nsfw/neko2', async (req, res, next) => {
     const randneko2 = neko2[Math.floor(Math.random() * neko2.length)];
     data = await fetch(randneko2).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/neko2.jpeg', data)
-    res.sendFile(__path + '/tmp/neko2.jpeg')
+    res.json({
+      url: `${randneko2}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2308,7 +2350,9 @@ router.get('/nsfw/tentacles', async (req, res, next) => {
     const randtentacles = tentacles[Math.floor(Math.random() * tentacles.length)];
     data = await fetch(randtentacles).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/tentacles.jpeg', data)
-    res.sendFile(__path + '/tmp/tentacles.jpeg')
+    res.json({
+      url: `${randtentacles}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2324,7 +2368,9 @@ router.get('/nsfw/thighs', async (req, res, next) => {
     const randthighs = thighs[Math.floor(Math.random() * thighs.length)];
     data = await fetch(randthighs).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/thighs.jpeg', data)
-    res.sendFile(__path + '/tmp/thighs.jpeg')
+    res.json({
+      url: `${randthighs}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2340,7 +2386,9 @@ router.get('/nsfw/yuri', async (req, res, next) => {
     const randyuri = yuri[Math.floor(Math.random() * yuri.length)];
     data = await fetch(randyuri).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/yuri.jpeg', data)
-    res.sendFile(__path + '/tmp/yuri.jpeg')
+    res.json({
+      url: `${randyuri}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2356,7 +2404,9 @@ router.get('/nsfw/zettai', async (req, res, next) => {
     const randzettai = zettai[Math.floor(Math.random() * zettai.length)];
     data = await fetch(randzettai).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/zettai.jpeg', data)
-    res.sendFile(__path + '/tmp/zettai.jpeg')
+    res.json({
+      url: `${randzettai}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2372,7 +2422,9 @@ router.get('/anime/keneki', async (req, res, next) => {
     const randkeneki = keneki[Math.floor(Math.random() * keneki.length)];
     data = await fetch(randkeneki).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/keneki.jpeg', data)
-    res.sendFile(__path + '/tmp/keneki.jpeg')
+    res.json({
+      url: `${randkeneki}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2388,7 +2440,9 @@ router.get('/anime/megumin', async (req, res, next) => {
     const randmegumin = megumin[Math.floor(Math.random() * megumin.length)];
     data = await fetch(randmegumin).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/megumin.jpeg', data)
-    res.sendFile(__path + '/tmp/megumin.jpeg')
+    res.json({
+      url: `${randmegumin}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2404,7 +2458,9 @@ router.get('/anime/yotsuba', async (req, res, next) => {
     const randyotsuba = yotsuba[Math.floor(Math.random() * yotsuba.length)];
     data = await fetch(randyotsuba).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/yotsuba.jpeg', data)
-    res.sendFile(__path + '/tmp/yotsuba.jpeg')
+    res.json({
+      url: `${randyotsuba}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2420,7 +2476,9 @@ router.get('/anime/shinomiya', async (req, res, next) => {
     const randshinomiya = shinomiya[Math.floor(Math.random() * shinomiya.length)];
     data = await fetch(randshinomiya).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/shinomiya.jpeg', data)
-    res.sendFile(__path + '/tmp/shinomiya.jpeg')
+    res.json({
+      url: `${randshinomiya}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2436,7 +2494,9 @@ router.get('/anime/yumeko', async (req, res, next) => {
     const randyumeko = yumeko[Math.floor(Math.random() * yumeko.length)];
     data = await fetch(randyumeko).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/yumeko.jpeg', data)
-    res.sendFile(__path + '/tmp/yumeko.jpeg')
+    res.json({
+      url: `${randyumeko}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2452,7 +2512,9 @@ router.get('/anime/tejina', async (req, res, next) => {
     const randtejina = tejina[Math.floor(Math.random() * tejina.length)];
     data = await fetch(randtejina).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/tejina.jpeg', data)
-    res.sendFile(__path + '/tmp/tejina.jpeg')
+    res.json({
+      url: `${randtejina}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2468,7 +2530,9 @@ router.get('/anime/chiho', async (req, res, next) => {
     const randchiho = chiho[Math.floor(Math.random() * chiho.length)];
     data = await fetch(randchiho).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/chiho.jpeg', data)
-    res.sendFile(__path + '/tmp/chiho.jpeg')
+    res.json({
+      url: `${randchiho}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2484,7 +2548,9 @@ router.get('/wallpaper/cyberspace', async (req, res, next) => {
     const randcyberspace = cyberspace[Math.floor(Math.random() * cyberspace.length)];
     data = await fetch(randcyberspace).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/cyberspace.jpeg', data)
-    res.sendFile(__path + '/tmp/cyberspace.jpeg')
+    res.json({
+      url: `${randcyberspace}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2500,7 +2566,9 @@ router.get('/wallpaper/gaming', async (req, res, next) => {
     const randgaming = gaming[Math.floor(Math.random() * gaming.length)];
     data = await fetch(randgaming).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/gaming.jpeg', data)
-    res.sendFile(__path + '/tmp/gaming.jpeg')
+    res.json({
+      url: `${randgaming}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2516,7 +2584,9 @@ router.get('/wallpaper/programing', async (req, res, next) => {
     const randprograming = programing[Math.floor(Math.random() * programing.length)];
     data = await fetch(randprograming).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/programing.jpeg', data)
-    res.sendFile(__path + '/tmp/programing.jpeg')
+    res.json({
+      url: `${randprograming}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2532,7 +2602,9 @@ router.get('/wallpaper/wallpapertec', async (req, res, next) => {
     const randteknologi = teknologi[Math.floor(Math.random() * teknologi.length)];
     data = await fetch(randteknologi).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/teknologi.jpeg', data)
-    res.sendFile(__path + '/tmp/teknologi.jpeg')
+    res.json({
+      url: `${randteknologi}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2548,7 +2620,9 @@ router.get('/wallpaper/mountain', async (req, res, next) => {
     const randmountain = mountain[Math.floor(Math.random() * mountain.length)];
     data = await fetch(randmountain).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/mountain.jpeg', data)
-    res.sendFile(__path + '/tmp/mountain.jpeg')
+    res.json({
+      url: `${randmountain}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2566,7 +2640,9 @@ router.get('/anime/toukachan', async (req, res, next) => {
     const randtoukachan = toukachan[Math.floor(Math.random() * toukachan.length)];
     data = await fetch(randtoukachan).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/toukachan.jpeg', data)
-    res.sendFile(__path + '/tmp/toukachan.jpeg')
+    res.json({
+      url: `${randtoukachan}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2582,7 +2658,9 @@ router.get('/anime/akira', async (req, res, next) => {
     const randakira = akira[Math.floor(Math.random() * akira.length)];
     data = await fetch(randakira).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/akira.jpeg', data)
-    res.sendFile(__path + '/tmp/akira.jpeg')
+    res.json({
+      url: `${randakira}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2598,7 +2676,9 @@ router.get('/anime/itori', async (req, res, next) => {
     const randitori = itori[Math.floor(Math.random() * itori.length)];
     data = await fetch(randitori).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/itori.jpeg', data)
-    res.sendFile(__path + '/tmp/itori.jpeg')
+    res.json({
+      url: `${randitori}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2614,7 +2694,9 @@ router.get('/anime/kurumi', async (req, res, next) => {
     const randkurumi = kurumi[Math.floor(Math.random() * kurumi.length)];
     data = await fetch(randkurumi).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/kurumi.jpeg', data)
-    res.sendFile(__path + '/tmp/kurumi.jpeg')
+    res.json({
+      url: `${randkurumi}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2630,7 +2712,9 @@ router.get('/anime/miku', async (req, res, next) => {
     const randmiku = miku[Math.floor(Math.random() * miku.length)];
     data = await fetch(randmiku).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/miku.jpeg', data)
-    res.sendFile(__path + '/tmp/miku.jpeg')
+    res.json({
+      url: `${randmiku}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2646,7 +2730,9 @@ router.get('/anime/pokemon', async (req, res, next) => {
     const randpokemon = pokemon[Math.floor(Math.random() * pokemon.length)];
     data = await fetch(randpokemon).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/pokemon.jpeg', data)
-    res.sendFile(__path + '/tmp/pokemon.jpeg')
+    res.json({
+      url: `${randpokemon}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2662,7 +2748,9 @@ router.get('/anime/ryujin', async (req, res, next) => {
     const randryujin = ryujin[Math.floor(Math.random() * ryujin.length)];
     data = await fetch(randryujin).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ryujin.jpeg', data)
-    res.sendFile(__path + '/tmp/ryujin.jpeg')
+    res.json({
+      url: `${randryujin}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2678,7 +2766,9 @@ router.get('/anime/rose', async (req, res, next) => {
     const randrose = rose[Math.floor(Math.random() * rose.length)];
     data = await fetch(randrose).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/rose.jpeg', data)
-    res.sendFile(__path + '/tmp/rose.jpeg')
+    res.json({
+      url: `${randrose}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2694,7 +2784,9 @@ router.get('/anime/kaori', async (req, res, next) => {
     const randkaori = kaori[Math.floor(Math.random() * kaori.length)];
     data = await fetch(randkaori).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/kaori.jpeg', data)
-    res.sendFile(__path + '/tmp/kaori.jpeg')
+    res.json({
+      url: `${randkaori}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2710,7 +2802,9 @@ router.get('/anime/shizuka', async (req, res, next) => {
     const randshizuka = shizuka[Math.floor(Math.random() * shizuka.length)];
     data = await fetch(randshizuka).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/shizuka.jpeg', data)
-    res.sendFile(__path + '/tmp/shizuka.jpeg')
+    res.json({
+      url: `${randshizuka}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2726,7 +2820,9 @@ router.get('/anime/kaga', async (req, res, next) => {
     const randkaga = kaga[Math.floor(Math.random() * kaga.length)];
     data = await fetch(randkaga).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/kaga.jpeg', data)
-    res.sendFile(__path + '/tmp/kaga.jpeg')
+    res.json({
+      url: `${randkaga}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2742,7 +2838,9 @@ router.get('/anime/kotori', async (req, res, next) => {
     const randkotori = kotori[Math.floor(Math.random() * kotori.length)];
     data = await fetch(randkotori).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/kotori.jpeg', data)
-    res.sendFile(__path + '/tmp/kotori.jpeg')
+    res.json({
+      url: `${randkotori}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2758,7 +2856,9 @@ router.get('/anime/mikasa', async (req, res, next) => {
     const randmikasa = mikasa[Math.floor(Math.random() * mikasa.length)];
     data = await fetch(randmikasa).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/mikasa.jpeg', data)
-    res.sendFile(__path + '/tmp/mikasa.jpeg')
+    res.json({
+      url: `${randmikasa}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2774,7 +2874,9 @@ router.get('/anime/akiyama', async (req, res, next) => {
     const randakiyama = akiyama[Math.floor(Math.random() * akiyama.length)];
     data = await fetch(randakiyama).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/akiyama.jpeg', data)
-    res.sendFile(__path + '/tmp/akiyama.jpeg')
+    res.json({
+      url: `${randakiyama}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2790,7 +2892,9 @@ router.get('/anime/gremory', async (req, res, next) => {
     const randgremory = gremory[Math.floor(Math.random() * gremory.length)];
     data = await fetch(randgremory).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/gremory.jpeg', data)
-    res.sendFile(__path + '/tmp/gremory.jpeg')
+    res.json({
+      url: `${randgremory}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2806,7 +2910,9 @@ router.get('/anime/isuzu', async (req, res, next) => {
     const randisuzu = isuzu[Math.floor(Math.random() * isuzu.length)];
     data = await fetch(randisuzu).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/isuzu.jpeg', data)
-    res.sendFile(__path + '/tmp/isuzu.jpeg')
+    res.json({
+      url: `${randisuzu}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2822,7 +2928,9 @@ router.get('/anime/cosplay', async (req, res, next) => {
     const randcosplay = cosplay[Math.floor(Math.random() * cosplay.length)];
     data = await fetch(randcosplay).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/cosplay.jpeg', data)
-    res.sendFile(__path + '/tmp/cosplay.jpeg')
+    res.json({
+      url: `${randcosplay}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2838,7 +2946,9 @@ router.get('/anime/shina', async (req, res, next) => {
     const randshina = shina[Math.floor(Math.random() * shina.length)];
     data = await fetch(randshina).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/shina.jpeg', data)
-    res.sendFile(__path + '/tmp/shina.jpeg')
+    res.json({
+      url: `${randshina}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2854,7 +2964,9 @@ router.get('/anime/kagura', async (req, res, next) => {
     const randkagura = kagura[Math.floor(Math.random() * kagura.length)];
     data = await fetch(randkagura).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/kagura.jpeg', data)
-    res.sendFile(__path + '/tmp/kagura.jpeg')
+    res.json({
+      url: `${randkagura}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2870,7 +2982,9 @@ router.get('/anime/shinka', async (req, res, next) => {
     const randshinka = shinka[Math.floor(Math.random() * shinka.length)];
     data = await fetch(randshinka).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/shinka.jpeg', data)
-    res.sendFile(__path + '/tmp/shinka.jpeg')
+    res.json({
+      url: `${randshinka}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2886,7 +3000,9 @@ router.get('/anime/eba', async (req, res, next) => {
     const randeba = eba[Math.floor(Math.random() * eba.length)];
     data = await fetch(randeba).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/eba.jpeg', data)
-    res.sendFile(__path + '/tmp/eba.jpeg')
+    res.json({
+      url: `${randeba}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2902,7 +3018,9 @@ router.get('/anime/deidara', async (req, res, next) => {
     const randDeidara = Deidara[Math.floor(Math.random() * Deidara.length)];
     data = await fetch(randDeidara).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/deidara.jpeg', data)
-    res.sendFile(__path + '/tmp/deidara.jpeg')
+    res.json({
+      url: `${randDeidara}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2920,7 +3038,9 @@ router.get('/anime/jeni', async (req, res, next) => {
     const randjeni = jeni[Math.floor(Math.random() * jeni.length)];
     data = await fetch(randjeni).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/jeni.jpeg', data)
-    res.sendFile(__path + '/tmp/jeni.jpeg')
+    res.json({
+      url: `${randjeni}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2937,7 +3057,9 @@ router.get('/random/meme', async (req, res, next) => {
     const randmeme = meme[Math.floor(Math.random() * meme.length)];
     data = await fetch(randmeme).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/meme.jpeg', data)
-    res.sendFile(__path + '/tmp/meme.jpeg')
+    res.json({
+      url: `${randmeme}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2953,7 +3075,9 @@ router.get('/wallpaper/satanic', async (req, res, next) => {
     const randsatanic = satanic[Math.floor(Math.random() * satanic.length)];
     data = await fetch(randsatanic).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/satanic.jpeg', data)
-    res.sendFile(__path + '/tmp/satanic.jpeg')
+    res.json({
+      url: `${randsatanic}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2971,7 +3095,9 @@ router.get('/anime/itachi', async (req, res, next) => {
     const randItachi = Itachi[Math.floor(Math.random() * Itachi.length)];
     data = await fetch(randItachi).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ita.jpeg', data)
-    res.sendFile(__path + '/tmp/ita.jpeg')
+    res.json({
+      url: `${randItachi}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -2987,7 +3113,9 @@ router.get('/anime/madara', async (req, res, next) => {
     const randMadara = Madara[Math.floor(Math.random() * Madara.length)];
     data = await fetch(randMadara).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/madara.jpeg', data)
-    res.sendFile(__path + '/tmp/madara.jpeg')
+    res.json({
+      url: `${randMadara}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3003,7 +3131,9 @@ router.get('/anime/yuki', async (req, res, next) => {
     const randYuki = Yuki[Math.floor(Math.random() * Yuki.length)];
     data = await fetch(randYuki).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/yuki.jpeg', data)
-    res.sendFile(__path + '/tmp/yuki.jpeg')
+    res.json({
+      url: `${randYuki}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3019,7 +3149,9 @@ router.get('/wallpaper/asuna', async (req, res, next) => {
     const randasuna = asuna[Math.floor(Math.random() * asuna.length)];
     data = await fetch(randasuna).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/asuna.jpeg', data)
-    res.sendFile(__path + '/tmp/asuna.jpeg')
+    res.json({
+      url: `${randasuna}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3035,7 +3167,9 @@ router.get('/anime/ayuzawa', async (req, res, next) => {
     const randayuzawa = ayuzawa[Math.floor(Math.random() * ayuzawa.length)];
     data = await fetch(randayuzawa).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ayuzawa.jpeg', data)
-    res.sendFile(__path + '/tmp/ayuzawa.jpeg')
+    res.json({
+      url: `${randayuzawa}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3051,7 +3185,9 @@ router.get('/anime/chitoge', async (req, res, next) => {
     const randchitoge = chitoge[Math.floor(Math.random() * chitoge.length)];
     data = await fetch(randchitoge).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/chitoge.jpeg', data)
-    res.sendFile(__path + '/tmp/chitoge.jpeg')
+    res.json({
+      url: `${randchitoge}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3067,7 +3203,9 @@ router.get('/anime/emilia', async (req, res, next) => {
     const randemilia = emilia[Math.floor(Math.random() * emilia.length)];
     data = await fetch(randemilia).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/emilia.jpeg', data)
-    res.sendFile(__path + '/tmp/emilia.jpeg')
+    res.json({
+      url: `${randemilia}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3083,7 +3221,9 @@ router.get('/anime/hestia', async (req, res, next) => {
     const randhestia = hestia[Math.floor(Math.random() * hestia.length)];
     data = await fetch(randhestia).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/hestia.jpeg', data)
-    res.sendFile(__path + '/tmp/hestia.jpeg')
+    res.json({
+      url: `${randhestia}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3099,7 +3239,9 @@ router.get('/anime/inori', async (req, res, next) => {
     const randinori = inori[Math.floor(Math.random() * inori.length)];
     data = await fetch(randinori).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/inori.jpeg', data)
-    res.sendFile(__path + '/tmp/inori.jpeg')
+    res.json({
+      url: `${randinori}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3115,7 +3257,9 @@ router.get('/anime/ana', async (req, res, next) => {
     const randana = ana[Math.floor(Math.random() * ana.length)];
     data = await fetch(randana).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ana.jpeg', data)
-    res.sendFile(__path + '/tmp/ana.jpeg')
+    res.json({
+      url: `${randana}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3131,7 +3275,9 @@ router.get('/anime/boruto', async (req, res, next) => {
     const randBoruto = Boruto[Math.floor(Math.random() * Boruto.length)];
     data = await fetch(randBoruto).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/bor.jpeg', data)
-    res.sendFile(__path + '/tmp/bor.jpeg')
+    res.json({
+      url: `${randBoruto}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3147,7 +3293,9 @@ router.get('/anime/erza', async (req, res, next) => {
     const randErza = Erza[Math.floor(Math.random() * Erza.length)];
     data = await fetch(randErza).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/erza.jpeg', data)
-    res.sendFile(__path + '/tmp/erza.jpeg')
+    res.json({
+      url: `${randErza}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3163,7 +3311,9 @@ router.get('/anime/kakasih', async (req, res, next) => {
     const randKakasih = Kakasih[Math.floor(Math.random() * Kakasih.length)];
     data = await fetch(randKakasih).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ka.jpeg', data)
-    res.sendFile(__path + '/tmp/ka.jpeg')
+    res.json({
+      url: `${randKakasih}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3179,7 +3329,9 @@ router.get('/anime/sagiri', async (req, res, next) => {
     const randSagiri = Sagiri[Math.floor(Math.random() * Sagiri.length)];
     data = await fetch(randSagiri).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/sagiri.jpeg', data)
-    res.sendFile(__path + '/tmp/sagiri.jpeg')
+    res.json({
+      url: `${randSagiri}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3195,7 +3347,9 @@ router.get('/anime/minato', async (req, res, next) => {
     const randMinato = Minato[Math.floor(Math.random() * Minato.length)];
     data = await fetch(randMinato).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/minato.jpeg', data)
-    res.sendFile(__path + '/tmp/minato.jpeg')
+    res.json({
+      url: `${randMinato}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3211,7 +3365,9 @@ router.get('/anime/naruto', async (req, res, next) => {
     const randNaruto = Naruto[Math.floor(Math.random() * Naruto.length)];
     data = await fetch(randNaruto).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/naruto.jpeg', data)
-    res.sendFile(__path + '/tmp/naruto.jpeg')
+    res.json({
+      url: `${randNaruto}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3227,7 +3383,9 @@ router.get('/anime/nezuko', async (req, res, next) => {
     const randNezuko = Nezuko[Math.floor(Math.random() * Nezuko.length)];
     data = await fetch(randNezuko).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/nezu.jpeg', data)
-    res.sendFile(__path + '/tmp/nezu.jpeg')
+    res.json({
+      url: `${randNezuko}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3243,7 +3401,9 @@ router.get('/anime/onepiece', async (req, res, next) => {
     const randPic = Pic[Math.floor(Math.random() * Pic.length)];
     data = await fetch(randPic).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/pic.jpeg', data)
-    res.sendFile(__path + '/tmp/pic.jpeg')
+    res.json({
+      url: `${randPic}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3259,7 +3419,9 @@ router.get('/anime/rize', async (req, res, next) => {
     const randRize = Rize[Math.floor(Math.random() * Rize.length)];
     data = await fetch(randRize).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/rize.jpeg', data)
-    res.sendFile(__path + '/tmp/rize.jpeg')
+    res.json({
+      url: `${randRize}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3275,7 +3437,9 @@ router.get('/anime/sakura', async (req, res, next) => {
     const randSakura = Sakura[Math.floor(Math.random() * Sakura.length)];
     data = await fetch(randSakura).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/sakura.jpeg', data)
-    res.sendFile(__path + '/tmp/sakura.jpeg')
+    res.json({
+      url: `${randSakura}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3291,7 +3455,9 @@ router.get('/anime/sasuke', async (req, res, next) => {
     const randSasuke = Sasuke[Math.floor(Math.random() * Sasuke.length)];
     data = await fetch(randSasuke).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/sasuke.jpeg', data)
-    res.sendFile(__path + '/tmp/sasuke.jpeg')
+    res.json({
+      url: `${randSasuke}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3307,7 +3473,9 @@ router.get('/anime/tsunade', async (req, res, next) => {
     const randSu = Su[Math.floor(Math.random() * Su.length)];
     data = await fetch(randSu).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/su.jpeg', data)
-    res.sendFile(__path + '/tmp/su.jpeg')
+    res.json({
+      url: `${randSu}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3323,12 +3491,14 @@ router.get('/anime/montor', async (req, res, next) => {
     const randMon = Mon[Math.floor(Math.random() * Mon.length)];
     data = await fetch(randMon).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/montor.jpeg', data)
-    res.sendFile(__path + '/tmp/montor.jpeg');
+    res.json({
+      url: `${randMon}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
 })
-
+// ain
 router.get('/anime/mobil', async (req, res, next) => {
   var Apikey = req.query.apikey
 
@@ -3339,7 +3509,9 @@ router.get('/anime/mobil', async (req, res, next) => {
     const randMob = Mob[Math.floor(Math.random() * Mob.length)];
     data = await fetch(randMob).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/mobil.jpeg', data)
-    res.sendFile(__path + '/tmp/mobil.jpeg');
+    res.json({
+      url: `${randMob}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3356,7 +3528,9 @@ router.get('/anime/anime', async (req, res, next) => {
     const randWai23 = Wai23[Math.floor(Math.random() * Wai23.length)];
     data = await fetch(randWai23).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/wallhp2.jpeg', data)
-    res.sendFile(__path + '/tmp/wallhp2.jpeg');
+    res.json({
+      url: `${randWai23}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3373,7 +3547,9 @@ router.get('/anime/wallhp', async (req, res, next) => {
     const randWai22 = Wai22[Math.floor(Math.random() * Wai22.length)];
     data = await fetch(randWai22).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/wallhp.jpeg', data)
-    res.sendFile(__path + '/tmp/wallhp.jpeg');
+    res.json({
+      url: `${randWai22}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3389,7 +3565,9 @@ router.get('/anime/waifu2', async (req, res, next) => {
     const randWai2 = Wai2[Math.floor(Math.random() * Wai2.length)];
     data = await fetch(randWai2).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/wibu2.jpeg', data)
-    res.sendFile(__path + '/tmp/wibu2.jpeg');
+    res.json({
+      url: `${randWai2}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3405,7 +3583,9 @@ router.get('/anime/waifu', async (req, res, next) => {
     const randWai = Wai[Math.floor(Math.random() * Wai.length)];
     data = await fetch(randWai).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/wibu.jpeg', data)
-    res.sendFile(__path + '/tmp/wibu.jpeg');
+    res.json({
+      url: `${randWai}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3422,7 +3602,9 @@ router.get('/anime/hekel', async (req, res, next) => {
     const randHekel = Hekel[Math.floor(Math.random() * Hekel.length)]
     data = await fetch(randHekel).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/hek.jpeg', data)
-    res.sendFile(__path + '/tmp/hek.jpeg')
+    res.json({
+      url: `${randHekel}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3438,7 +3620,9 @@ router.get('/anime/kucing', async (req, res, next) => {
     const randKucing = Kucing[Math.floor(Math.random() * Kucing.length)]
     data = await fetch(randKucing).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/kucing.jpeg', data)
-    res.sendFile(__path + '/tmp/kucing.jpeg')
+    res.json({
+      url: `${randKucing}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3454,7 +3638,9 @@ router.get('/wallpaper/pubg', async (req, res, next) => {
     const randPubg = Pubg[Math.floor(Math.random() * Pubg.length)]
     data = await fetch(randPubg).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/pubg.jpeg', data)
-    res.sendFile(__path + '/tmp/pubg.jpeg')
+    res.json({
+      url: `${randPubg}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3470,7 +3656,9 @@ router.get('/wallpaper/ppcouple', async (req, res, next) => {
     const randPp = Pp[Math.floor(Math.random() * Pp.length)]
     data = await fetch(randPp).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/pp.jpeg', data)
-    res.sendFile(__path + '/tmp/pp.jpeg')
+    res.json({
+      url: `${randPp}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3486,7 +3674,9 @@ router.get('/wallpaper/anjing', async (req, res, next) => {
     const randAnjing = Anjing[Math.floor(Math.random() * Anjing.length)]
     data = await fetch(randAnjing).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/ajg.jpeg', data)
-    res.sendFile(__path + '/tmp/ajg.jpeg')
+    res.json({
+      url: `${randAnjing}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3502,7 +3692,9 @@ router.get('/anime/doraemon', async (req, res, next) => {
     const randDora = Dora[Math.floor(Math.random() * Dora.length)]
     data = await fetch(randDora).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/dora.jpeg', data)
-    res.sendFile(__path + '/tmp/dora.jpeg')
+    res.json({
+      url: `${randDora}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3519,7 +3711,9 @@ router.get('/anime/elaina', async (req, res, next) => {
     //tansole.log(randLoli)
     data = await fetch(randElaina).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/elaina.jpeg', data)
-    res.sendFile(__path + '/tmp/elaina.jpeg')
+    res.json({
+      url: `${randElaina}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3536,7 +3730,9 @@ router.get('/anime/loli', async (req, res, next) => {
     //tansole.log(randLoli)
     data = await fetch(randLoli).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/loli.jpeg', data)
-    res.sendFile(__path + '/tmp/loli.jpeg')
+    res.json({
+      url: `${randLoli}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3553,7 +3749,9 @@ router.get('/anime/yuri', async (req, res, next) => {
     //tansole.log(randTech)
     data = await fetch(randYuri).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/Yuri.jpeg', data)
-    res.sendFile(__path + '/tmp/Yuri.jpeg')
+    res.json({
+      url: `${randYuri}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3570,7 +3768,9 @@ router.get('/anime/cecan', async (req, res, next) => {
     const randCecan = cecan[Math.floor(Math.random() * cecan.length)];
     data = await fetch(randCecan).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/cecan.jpeg', data)
-    res.sendFile(__path + '/tmp/cecan.jpeg');
+    res.json({
+      url: `${randCecan}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3587,7 +3787,9 @@ router.get('/wallpaper/aesthetic', async (req, res, next) => {
     const randAesthetic = Aesthetic[Math.floor(Math.random() * Aesthetic.length)];
     data = await fetch(randAesthetic).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/aesthetic.jpeg', data)
-    res.sendFile(__path + '/tmp/aesthetic.jpeg');
+    res.json({
+      url: `${randAesthetic}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3605,7 +3807,9 @@ router.get('/anime/sagiri', async (req, res, next) => {
     const randSagiri = Sagiri[Math.floor(Math.random() * Sagiri.length)];
     data = await fetch(randSagiri).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/sagiri.jpeg', data)
-    res.sendFile(__path + '/tmp/sagiri.jpeg')
+    res.json({
+      url: `${randSagiri}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3621,7 +3825,9 @@ router.get('/anime/shota', async (req, res, next) => {
     const randShota = Shota[Math.floor(Math.random() * Shota.length)];
     data = await fetch(randShota).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/shota.jpeg', data)
-    res.sendFile(__path + '/tmp/shota.jpeg');
+    res.json({
+      url: `${randShota}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3637,7 +3843,9 @@ router.get('/anime/nsfwloli', async (req, res, next) => {
     const randLol = Lol[Math.floor(Math.random() * Lol.length)];
     data = await fetch(randLol).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/lol.jpeg', data)
-    res.sendFile(__path + '/tmp/lol.jpeg');
+    res.json({
+      url: `${randLol}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -3651,7 +3859,9 @@ router.get('/anime/hinata', async (req, res, next) => {
     const randHin = Hinata[Math.floor(Math.random() * Hinata.length)];
     data = await fetch(randHin).then(v => v.buffer());
     await fs.writeFileSync(__path + '/tmp/Hinata.jpeg', data)
-    res.sendFile(__path + '/tmp/Hinata.jpeg');
+    res.json({
+      url: `${randHin}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -4517,11 +4727,12 @@ router.get('/textpro/wolf', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/lobo.jpg', function(){
-            res.sendFile(path.resolve('./tmp/lobo.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
-        
-        
       })
       .catch((err) => console.log(err));
   } else {
@@ -4575,12 +4786,13 @@ router.get('/textpro/wolf2', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/vingadores.jpg', function(){
-            res.sendFile(path.resolve('./tmp/vingadores.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
-        })
-        
-      
+      })
       .catch((err) => console.log(err));
   } else {
     res.json(loghandler.invalidKey)
@@ -5497,8 +5709,11 @@ router.get('/textpro/1917', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/1917.jpg', function(){
-            res.sendFile(path.resolve('./tmp/1917.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -5523,8 +5738,11 @@ router.get('/textpro/thunder2', async (req, res, next) => {
       ])
       .then((data) => {
       var urlnya = data
-          download(urlnya, './tmp/thunder.jpg', function(){
-            res.sendFile(path.resolve('./tmp/thunder.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -5551,8 +5769,11 @@ router.get('/textpro/space', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/space.jpg', function(){
-            res.sendFile(path.resolve('./tmp/space.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -5578,11 +5799,13 @@ router.get('/textpro/joker', async (req, res, next) => {
       .then((data) => {
         
        var urlnya = data
-          download(urlnya, './tmp/joker.jpg', function(){
-            res.sendFile(path.resolve('./tmp/joker.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
-        
-      })
+        })
       .catch((err) => console.log(err));
   } else {
     res.json(loghandler.invalidKey)
@@ -5779,12 +6002,14 @@ router.get('/textpro/ninjalogo', async (req, res, next) => {
       ])
       .then((data) => {
      var urlnya = data
-          download(urlnya, './tmp/ninja.jpg', function(){
-            res.sendFile(path.resolve('./tmp/ninja.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
         })
-    
-      .catch((err) => console.log(err));
+    .catch((err) => console.log(err));
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -5827,7 +6052,12 @@ router.get('/textpro/leao', async (req, res, next) => {
        
       .then((data) => {
         texproimg = getBuffer(data)
-       res.sendFile(texproimg)
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
+        })
       })
       .catch((err) => console.log(err));
   } else {
@@ -5853,12 +6083,14 @@ router.get('/textpro/vingadores', async (req, res, next) => {
       ])
       .then((data) => {
      var urlnya = data
-          download(urlnya, './tmp/vingadores.jpg', function(){
-            res.sendFile(path.resolve('./tmp/vingadores.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
         })
-      
-      .catch((err) => console.log(err));
+         .catch((err) => console.log(err));
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -5883,8 +6115,11 @@ router.get('/textpro/marvel', async (req, res, next) => {
       .then((data) => {
    
       var urlnya = data
-          download(urlnya, './tmp/marvel.jpg', function(){
-            res.sendFile(path.resolve('./tmp/marvel.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -5909,8 +6144,11 @@ router.get('/textpro/batman', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/batman.jpg', function(){
-            res.sendFile(path.resolve('./tmp/batman.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -5937,8 +6175,11 @@ router.get('/textpro/vingadores', async (req, res, next) => {
       ])
       .then((data) => {
     var urlnya = data
-          download(urlnya, './tmp/vingadores.jpg', function(){
-            res.sendFile(path.resolve('./tmp/vingadores.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -5964,8 +6205,11 @@ router.get('/textpro/thor', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/thor.jpg', function(){
-            res.sendFile(path.resolve('./tmp/thor.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -5991,8 +6235,11 @@ router.get('/textpro/capitaoamerica', async (req, res, next) => {
       ])
       .then((data) => {
       var urlnya = data
-          download(urlnya, './tmp/capitao.jpg', function(){
-            res.sendFile(path.resolve('./tmp/capitao.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -6079,8 +6326,11 @@ router.get('/textpro/wolf', async (req, res, next) => {
       ])
       .then((data) => {
        var urlnya = data
-          download(urlnya, './tmp/wolf.jpg', function(){
-            res.sendFile(path.resolve('./tmp/wolf.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -6132,8 +6382,11 @@ router.get('/textpro/blackpink', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/bp.jpg', function(){
-            res.sendFile(path.resolve('./tmp/bp.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -6158,8 +6411,11 @@ router.get('/textpro/urso', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/urso.jpg', function(){
-            res.sendFile(path.resolve('./tmp/urso.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -6183,8 +6439,11 @@ router.get('/textpro/verao', async (req, res, next) => {
       ])
       .then((data) => {
         var urlnya = data
-          download(urlnya, './tmp/verao.jpg', function(){
-            res.sendFile(path.resolve('./tmp/verao.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -6295,8 +6554,11 @@ router.get('/textpro/pornhub', async (req, res, next) => {
       ])
       .then((data) => {
     var urlnya = data
-          download(urlnya, './tmp/phub.jpg', function(){
-            res.sendFile(path.resolve('./tmp/phub.jpg'))
+        res.json({
+          status: true,
+          codigo: 200,
+          criador: `${creator}`,
+          resultado: data
         })
       })
       .catch((err) => console.log(err));
@@ -6337,7 +6599,9 @@ router.get('/asupan', async (req, res, next) => {
     const randAsupan = Asupan[Math.floor(Math.random() * Asupan.length)];
     data = await fetch(randAsupan).then(v => v.buffer())
     await fs.writeFileSync(__path + '/tmp/asupan.mp4', data)
-    res.sendFile(__path + '/tmp/asupan.mp4')
+    res.json({
+      url: `${randAsupan}`
+    })
   } else {
     res.json(loghandler.invalidKey)
   }
