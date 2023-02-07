@@ -24,7 +24,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<!-- Basic stylesheet -->
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+ 
+ <!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+ 
+
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -35,7 +41,7 @@
 
 <style>
 .content{
-  background: #000000 url(https://i.pinimg.com/originals/e4/65/6a/e4656a4d2c1933b71dc294697f058df1.gif) no-repeat center center fixed;
+  background: #000000 url(https://i.pinimg.com/originals/f2/bf/43/f2bf432e3a5c7b14a2c97451e7c6c50f.gif) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -48,19 +54,21 @@
 background: rgba(000,000,000 , 0.4);
 }
 .mb-2{
-color: gray;
+color: white;
 }
 .im{
 color: white;
 }
 .he{
-color:red;
+color: #07e8d9;
 
 }
 .hg{
 text-align: right;
 }
-</style>
+
+
+      </style>
 
 </head>
 
@@ -90,25 +98,30 @@ text-align: right;
 
 <br>
 
-                    <a href="api/game" class="nav-item nav-link">
-                        <i class="fas fa-ghost"></i> Jogar</a>
-
+<br>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-download"
                                 aria-hidden="true"></i> DOWNLOADER</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a class="dropdown-item" target="_blank"
-                                href="/api/download/ytmp4?url=https://www.youtube.com/watch?v=7AlAYttGnAg&apikey=APIKEY"
+                                href="/api/download/ytmp4?url=https://www.youtube.com/watch?v=7AlAYttGnAg&apikey=clover"
                                 target="_blank">Youtube Video</a>
                             <a class="dropdown-item" target="_blank"
-                                href="/api/download/ytmp3?url=https://www.youtube.com/watch?v=7AlAYttGnAg&apikey=APIKEY"
+                                href="/api/download/ytmp3?url=https://www.youtube.com/watch?v=7AlAYttGnAg&apikey=clover"
                                 target="_blank">Youtube Audio</a>
-                            <a class="dropdown-item" target="_blank" href="/api/yt/playmp3?query=vmz baka&apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/yt/playmp3?query=vmz baka&apikey=clover"
                                 target="_blank">Play MP3</a>
-                            <a class="dropdown-item" target="_blank" href="/api/yt/playmp4?query=vmz baka&apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/yt/playmp4?query=vmz baka&apikey=clover"
                                 target="_blank">Play MP4</a>
-                            <a class="dropdown-item" target="_blank" href="/api/yt/search?query=vmz&apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/yt/search?query=vmz&apikey=clover"
                                 target="_blank">YT Search</a>
+
+                            <a class="dropdown-item" target="_blank" href="/api/download/tiktok?url=https://vm.tiktok.com/ZMY22YQd8/&apikey=clover"
+                                target="_blank">Tiktok audio/video</a>
+
+                          <a class="dropdown-item" target="_blank" href="/api/download/pinterest?query=naruto&apikey=clover"
+                                target="_blank">Pinterest</a>
+
 
                         </div>
                     </div>
@@ -116,41 +129,41 @@ text-align: right;
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                                 class="fa fa-gamepad"></i> JOGOS </a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a class="dropdown-item" target="_blank" href="/api/game/adivinheabandeira?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/game/adivinheabandeira?apikey=clover"
                                 target="_blank">Adivinhe a Bandeira 🇧🇷</a>
-                            <a class="dropdown-item" target="_blank" href="/api/game/adivipersonagem?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/game/adivipersonagem?apikey=clover"
                                 target="_blank">Adivinhe o Personagem 👦</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> NSFW </a>
                         <div class="dropdown-menu bg-transparent border-0">
-                      <a class="dropdown-item" target="_blank" href="/api/wallpaper/nsfwloli?apikey=APIKEY" target="_blank" >Nswf loli</a>
-                       <a class="dropdown-item" target="_blank" href="/api/nsfw/ahegao?apikey=APIKEY" target="_blank" >nsfw ahegao</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/ass?apikey=APIKEY" target="_blank" >nsfw ass</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/bdsm?apikey=APIKEY" target="_blank" >Nswf bdsm</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/blowjob?apikey=APIKEY" target="_blank" >nsfw blowjob</a>
-		               <a class="dropdown-item" target="_blank" href="/api/nsfw/cuckold?apikey=APIKEY" target="_blank" >nsfw cuckold</a>
-		               <a class="dropdown-item" target="_blank" href="/api/nsfw/cum?apikey=APIKEY" target="_blank" >nsfw cum</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/ero?apikey=APIKEY" target="_blank" >nsfw ero</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/femdom?apikey=APIKEY" target="_blank" >nsfw femdom</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/foot?apikey=APIKEY" target="_blank" >nsfw foot</a>
-		                <a class="dropdown-item" target="_blank" href="/api/nsfw/gangbang?apikey=APIKEY" target="_blank" >nsfw gangbanh</a>
-		                <a class="dropdown-item" target="_blank" href="/api/nsfw/glasses?apikey=APIKEY" target="_blank" >nsfw glasses</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/hentai?apikey=APIKEY" target="_blank" >nsfw hentai</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/gifs?apikey=APIKEY" target="_blank" >nsfw gifs</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/jahy?apikey=APIKEY" target="_blank" >nsfw jahy</a>
-		                <a class="dropdown-item" target="_blank" href="/api/nsfw/manga?apikey=APIKEY" target="_blank" >nsfw manga</a>
-		                <a class="dropdown-item" target="_blank" href="/api/nsfw/masturbation?apikey=APIKEY" target="_blank" >nsfw mstb</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/neko?apikey=APIKEY" target="_blank" >nsfw neko</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/orgy?apikey=APIKEY" target="_blank" >nsfw orgy</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/panties?apikey=APIKEY" target="_blank" >nsfw panties</a>
-		                <a class="dropdown-item" target="_blank" href="/api/nsfw/pussy?apikey=APIKEY" target="_blank" >nsfw pussy</a>
-		                <a class="dropdown-item" target="_blank" href="/api/nsfw/neko2?apikey=APIKEY" target="_blank" >nsfw neko2</a>
-		                <a class="dropdown-item" target="_blank" href="/api/nsfw/tentacles?apikey=APIKEY" target="_blank" >nsfw tentacles</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/thighs?apikey=APIKEY" target="_blank" >nsfw things</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/yuri?apikey=APIKEY" target="_blank" >nsfw yuri</a>
-                        <a class="dropdown-item" target="_blank" href="/api/nsfw/zettai?apikey=APIKEY" target="_blank" >nsfw zettai</a>
+                      <a class="dropdown-item" target="_blank" href="/api/anime/nsfwloli?apikey=clover" target="_blank" >Nswf loli</a>
+                       <a class="dropdown-item" target="_blank" href="/api/nsfw/ahegao?apikey=clover" target="_blank" >nsfw ahegao</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/ass?apikey=clover" target="_blank" >nsfw ass</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/bdsm?apikey=clover" target="_blank" >Nswf bdsm</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/blowjob?apikey=clover" target="_blank" >nsfw blowjob</a>
+		               <a class="dropdown-item" target="_blank" href="/api/nsfw/cuckold?apikey=clover" target="_blank" >nsfw cuckold</a>
+		               <a class="dropdown-item" target="_blank" href="/api/nsfw/cum?apikey=clover" target="_blank" >nsfw cum</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/ero?apikey=clover" target="_blank" >nsfw ero</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/femdom?apikey=clover" target="_blank" >nsfw femdom</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/foot?apikey=clover" target="_blank" >nsfw foot</a>
+		                <a class="dropdown-item" target="_blank" href="/api/nsfw/gangbang?apikey=clover" target="_blank" >nsfw gangbanh</a>
+		                <a class="dropdown-item" target="_blank" href="/api/nsfw/glasses?apikey=clover" target="_blank" >nsfw glasses</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/hentai?apikey=clover" target="_blank" >nsfw hentai</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/gifs?apikey=clover" target="_blank" >nsfw gifs</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/jahy?apikey=clover" target="_blank" >nsfw jahy</a>
+		                <a class="dropdown-item" target="_blank" href="/api/nsfw/manga?apikey=clover" target="_blank" >nsfw manga</a>
+		                <a class="dropdown-item" target="_blank" href="/api/nsfw/masturbation?apikey=clover" target="_blank" >nsfw mstb</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/neko?apikey=clover" target="_blank" >nsfw neko</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/orgy?apikey=clover" target="_blank" >nsfw orgy</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/panties?apikey=clover" target="_blank" >nsfw panties</a>
+		                <a class="dropdown-item" target="_blank" href="/api/nsfw/pussy?apikey=clover" target="_blank" >nsfw pussy</a>
+		                <a class="dropdown-item" target="_blank" href="/api/nsfw/neko2?apikey=clover" target="_blank" >nsfw neko2</a>
+		                <a class="dropdown-item" target="_blank" href="/api/nsfw/tentacles?apikey=clover" target="_blank" >nsfw tentacles</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/thighs?apikey=clover" target="_blank" >nsfw things</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/yuri?apikey=clover" target="_blank" >nsfw yuri</a>
+                        <a class="dropdown-item" target="_blank" href="/api/nsfw/zettai?apikey=clover" target="_blank" >nsfw zettai</a>
                         </div>
                     </div>
 
@@ -163,51 +176,51 @@ text-align: right;
                        LOGOS
                        </h6>
                      </a>
-                               <a class="dropdown-item" href="/api/textpro/joker?text=trevo&apikey=APIKEY"
+                               <a class="dropdown-item" href="/api/textpro/joker?text=trevo&apikey=clover"
                                 target="_blank">Joker</a>
-                                 <a class="dropdown-item" href="/api/textpro/wolf?text=trevo&text2=api&apikey=APIKEY"
+                                 <a class="dropdown-item" href="/api/textpro/wolf?text=trevo&text2=api&apikey=clover"
                                 target="_blank">Wolf</a>
-                            <a class="dropdown-item" href="/api/textpro/wolf2?text=trevo&text2=api&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/wolf2?text=trevo&text2=api&apikey=clover"
                                 target="_blank">Logo Wolf 2</a>
-                            <a class="dropdown-item" href="/api/textpro/urso?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/urso?text=trevo&apikey=clover"
                                 target="_blank">Urso</a>
          
                             <a class="dropdown-item"
-                                href="/api/textpro/ninjalogo?text=trevo&text2=API&apikey=APIKEY"
+                                href="/api/textpro/ninjalogo?text=trevo&text2=API&apikey=clover"
                                 target="_blank">Ninja</a>
-                            <a class="dropdown-item" href="/api/textpro/leao?text=trevo&text2=APIz&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/leao?text=trevo&text2=APIz&apikey=clover"
                                 target="_blank">leao</a>
                        
                          <a class="dropdown-item"><h6 align="center"> HERÓIS</h6></a>
-                            <a class="dropdown-item" href="/api/textpro/vingadores?text=trevo&text2=API&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/vingadores?text=trevo&text2=API&apikey=clover"
                                 target="_blank">vingadores</a>
-                            <a class="dropdown-item" href="/api/textpro/marvel?text=trevo&text2=API&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/marvel?text=trevo&text2=API&apikey=clover"
                                 target="_blank">Marvel</a>
-                            <a class="dropdown-item" href="/api/textpro/thor?text=trevo&text2=API&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/thor?text=trevo&text2=API&apikey=clover"
                                 target="_blank">Thor</a>
-                            <a class="dropdown-item" href="/api/textpro/capitaoamerica?text=trevo&text2=API&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/capitaoamerica?text=trevo&text2=API&apikey=clover"
                                 target="_blank">Capitão América</a>
                                 <a class="dropdown-item">
                                   <h6 align="center">ALEATÓRIOS</h6>
-                                       <a class="dropdown-item" href="/api/textpro/pornhub?text=trevo&text2=API&apikey=APIKEY"
+                                       <a class="dropdown-item" href="/api/textpro/pornhub?text=trevo&text2=API&apikey=clover"
                                 target="_blank">PORNHUB</a>
-                            <a class="dropdown-item" href="/api/textpro/holograpic?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/holograpic?text=trevo&apikey=clover"
                                 target="_blank">Holograpic</a>
  
-                            <a class="dropdown-item" href="/api/textpro/blackpink?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/blackpink?text=trevo&apikey=clover"
                                 target="_blank">BlackPink</a>
-                            <a class="dropdown-item" href="/api/textpro/verao?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/verao?text=trevo&apikey=clover"
                                 target="_blank">Verão</a>
                            
-                            <a class="dropdown-item" href="/api/textpro/harrypotter?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/harrypotter?text=trevo&apikey=clover"
                                 target="_blank">Harry Potter</a>
-                            <a class="dropdown-item" href="/api/textpro/1917?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/1917?text=trevo&apikey=clover"
                                 target="_blank">1917</a>
-                            <a class="dropdown-item" href="/api/textpro/devil?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/devil?text=trevo&apikey=clover"
                                 target="_blank">Devil</a>
-                            <a class="dropdown-item" href="/api/textpro/thunder2?text=trevo&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/thunder2?text=trevo&apikey=clover"
                                 target="_blank">Thunder 2</a>
-                            <a class="dropdown-item" href="/api/textpro/space?text=trevo&text2=API&apikey=APIKEY"
+                            <a class="dropdown-item" href="/api/textpro/space?text=trevo&text2=API&apikey=clover"
                                 target="_blank">Space</a>
                                 </a>
                         </div>
@@ -218,32 +231,32 @@ text-align: right;
                                 class="fa fa-picture-o" aria-hidden="true"></i></i> WALLPAPER</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a class="dropdown-item" target="_blank"
-                                href="/api/wallpaper/satanic?apikey=APIKEY">Wallpaper
+                                href="/api/wallpaper/satanic?apikey=clover">Wallpaper
                                 Satanic </a>
 
                                             
                         
                             <a class="dropdown-item" target="_blank"
-                                href="/api/wallpaper/cyberspace?apikey=APIKEY">Wallpaper Cyberspace </a>
+                                href="/api/wallpaper/cyberspace?apikey=clover">Wallpaper Cyberspace </a>
                             <a class="dropdown-item" target="_blank"
-                                href="/api/wallpaper/gaming?apikey=APIKEY">Wallpaper
+                                href="/api/wallpaper/gaming?apikey=clover">Wallpaper
                                 Gamer </a>
 
-                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/wallpapertec?apikey=APIKEY">
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/wallpapertec?apikey=clover">
                                 Wallpaper Tecnológico</a>
                           
-                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/ppcouple?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/ppcouple?apikey=clover"
                                 target="_blank">PPcouple</a>
                        
 
-                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/pubg?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/pubg?apikey=clover"
                                 target="_blank">PUBG</a>
 
-                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=clover"
                                 target="_blank">Aesthetic</a>
-                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/wallpaper/aesthetic?apikey=clover"
                                 target="_blank">Wallpaper Aesthetic</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/anime?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/anime?apikey=clover"
                                 target="_blank">Wallpaper Anime</a>
                         </div>
                     </div>
@@ -251,122 +264,122 @@ text-align: right;
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-film"
                                 aria-hidden="true"></i>ANIMES</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a class="dropdown-item" target="_blank" href="/api/anime/amv?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/amv?apikey=clover"
                                 target="_blank">AMV</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/cosplay?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/cosplay?apikey=clover"
                                 target="_blank">Cosplay</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/waifu?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/waifu?apikey=clover"
                                 target="_blank">Waifu</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/waifu2?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/waifu2?apikey=clover"
                                 target="_blank">Waifu2</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/shota?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/shota?apikey=clover"
                                 target="_blank">shota</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/loli?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/loli?apikey=clover"
                                 target="_blank">Loli</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/yotsuba?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/yotsuba?apikey=clover"
                                 target="_blank">Yotsuba</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/shinomiya?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/shinomiya?apikey=clover"
                                 target="_blank">Shinomiya</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/yumeko?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/yumeko?apikey=clover"
                                 target="_blank">Yumeko</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/tejina?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/tejina?apikey=clover"
                                 target="_blank">Tejina</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/chiho?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/chiho?apikey=clover"
                                 target="_blank">Chiho</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/boruto?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/boruto?apikey=clover"
                                 target="_blank">Boruto</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/kaori?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/kaori?apikey=clover"
                                 target="_blank">Kaori</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/shizuka?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/shizuka?apikey=clover"
                                 target="_blank">Shizuka</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/kaga?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/kaga?apikey=clover"
                                 target="_blank">Kaga</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/kotori?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/kotori?apikey=clover"
                                 target="_blank">Kotori</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/mikasa?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/mikasa?apikey=clover"
                                 target="_blank">Mikasa</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/akiyama?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/akiyama?apikey=clover"
                                 target="_blank">Akiyama</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/gremory?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/gremory?apikey=clover"
                                 target="_blank">Gremory</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/isuzu?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/isuzu?apikey=clover"
                                 target="_blank">Isuzu</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/shina?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/shina?apikey=clover"
                                 target="_blank">Shina</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/kagura?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/kagura?apikey=clover"
                                 target="_blank">Kagura</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/shinka?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/shinka?apikey=clover"
                                 target="_blank">Shinka</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/eba?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/eba?apikey=clover"
                                 target="_blank">Eba</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/elaina?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/elaina?apikey=clover"
                                 target="_blank">Elaina</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/yuri?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/yuri?apikey=clover"
                                 target="_blank">Yuri</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/erza?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/erza?apikey=clover"
                                 target="_blank">Erza</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/hinata?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/hinata?apikey=clover"
                                 target="_blank">Hinata</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/minato?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/minato?apikey=clover"
                                 target="_blank">Minato</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/naruto?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/naruto?apikey=clover"
                                 target="_blank">Naruto</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/sagiri?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/sagiri?apikey=clover"
                                 target="_blank">Sagiri</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/nezuko?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/nezuko?apikey=clover"
                                 target="_blank">Nezuko</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/rize?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/rize?apikey=clover"
                                 target="_blank">Rize</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/ana?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/ana?apikey=clover"
                                 target="_blank">Anna</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/deidara?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/deidara?apikey=clover"
                                 target="_blank">Deidara</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/yuki?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/yuki?apikey=clover"
                                 target="_blank">Yuki</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/ana?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/ana?apikey=clover"
                                 target="_blank">Anna</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/asuna?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/asuna?apikey=clover"
                                 target="_blank">Asuna</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/ayuzawa?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/ayuzawa?apikey=clover"
                                 target="_blank">Ayuzawa</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/chitoge?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/chitoge?apikey=clover"
                                 target="_blank">Chitoge</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/emilia?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/emilia?apikey=clover"
                                 target="_blank">Emilia</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/hestia?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/hestia?apikey=clover"
                                 target="_blank">Hestia</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/inori?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/inori?apikey=clover"
                                 target="_blank">Inori</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/itachi?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/itachi?apikey=clover"
                                 target="_blank">Itachi</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/madara?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/madara?apikey=clover"
                                 target="_blank">Madara</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/sakura?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/sakura?apikey=clover"
                                 target="_blank">Sakura</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/sasuke?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/sasuke?apikey=clover"
                                 target="_blank">Sasuke</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/tsunade?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/tsunade?apikey=clover"
                                 target="_blank">Tsunade</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/onepiece?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/onepiece?apikey=clover"
                                 target="_blank">One Piece</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/mobil?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/mobil?apikey=clover"
                                 target="_blank">Mobil</a>
 
-                            <a class="dropdown-item" target="_blank" href="/api/anime/keneki?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/keneki?apikey=clover"
                                 target="_blank">Kaneki</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/megumin?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/megumin?apikey=clover"
                                 target="_blank">Megumin</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/toukachan?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/toukachan?apikey=clover"
                                 target="_blank">Toukachan</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/akira?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/akira?apikey=clover"
                                 target="_blank">Akira</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/itori?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/itori?apikey=clover"
                                 target="_blank">Itori</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/kurumi?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/kurumi?apikey=clover"
                                 target="_blank">Kurumi</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/miku?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/miku?apikey=clover"
                                 target="_blank">Miku</a>
-                            <a class="dropdown-item" target="_blank" href="/api/anime/pokemon?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/anime/pokemon?apikey=clover"
                                 target="_blank">Pokemon</a>
                         </div>
                     </div>
@@ -374,7 +387,7 @@ text-align: right;
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-film"
                                 aria-hidden="true"></i>RAMDON</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a class="dropdown-item" target="_blank" href="/api/random/meme?apikey=APIKEY"
+                            <a class="dropdown-item" target="_blank" href="/api/random/meme?apikey=clover"
                             target="_blank">Meme</a>
 
 
@@ -405,17 +418,20 @@ text-align: right;
                         <span class="d-none d-lg-inline-flex">Notificações</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                      <!--  <a href="#" class="dropdown-item">
-                            <h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                Novo Estilo!</h6>
-                            <small>5 minutos atrás</small>
-                        </a>-->
-                        <hr class="dropdown-divider">
-                        <a href="#" class="dropdown-item">
-                            <h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                Data de lançamento!</h6>
-                            <small class="im"> 02/01/23 </small>
-                        </a>
+                    
+<a href="#" class="dropdown-item">
+  
+<h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Pinterest download adicionado!</h6>
+<small class="im"> 06/02/23 </small></a>
+
+    <hr class="dropdown-divider">
+
+<a href="#" class="dropdown-item">
+<h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Tiktok download adicionado!</h6>
+<small class="im"> 05/02/23 </small></a>
+            
+                      
+
                     </div>
                 </div>
                 <div class="nav-item dropdown">
@@ -430,29 +446,37 @@ text-align: right;
         </nav>
 
         <!-- Footer Start -->
+  
 
+
+            
             <div class="container-fluid pt-4 px-4" align="center">
 
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="oii rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-connectdevelo" style="font-size:48px;color:red"></i>
-                            <div class="ms-3">
-                                 <p class="mb-2">Informações</p>
-      <h6 class="mb-0">
-      <div class="hg"> 
-                  <p> <div class="col-12 col-sm-6 text-center text-sm-start">&copy; <a href="#">Trevo-APIS</a>, All Right Reserved.</div>
-                    <div class="col-12 col-sm-6 text-center text-sm-end">Créditos do html <a href="https://htmlcodex.com">HTML Codex</a></p><p>
-                    <p>Nao sabe como usar? acesse a <a href="#" class="he">Documentação</a> e veja o básico</p>
-<p>
-Apikey grátis logo abaixo 👇  se quiser uma personalizada fale com o <a href="https://api.whatsapp.com/send?phone=557598659560&text=Oi%20Eu%20gostaria%20de%20criar%20uma%20conta%20so%20seu%20site%20de%20apis%20pra%20bot%20ja%20vou%20mandar%20a%20conta%20e%20a%20senha:" clássico="he">Clover</a>
-</p>
 
-                    </div></p>
-                    </div></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
+<div class="ba">
+    <div class="baum">
+      <h6 class="mb-0">
+      informações
+ <div class="testimonial-item text-center"><br>
+    <img class="img-fluid rounded-circle mx-auto mb-4" src="https://telegra.ph/file/e6fd65b2f2122a5905b14.jpg"
+style="width: 100px; height: 100px;">
+    <h5 class="mb-1">DESENVOLVIDO POR:</h5>
+    <p>Clover Mods</p>
+
+    <p>Esse é meu primeiro conjunto de Apis &#128512; <br>Se houver bugs por favor me contate!!
+    </p>
+    <div class="icons-container" align="start">
+    <a href="https://youtube.com/@clovermods/" class="icon">
+    <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://wa.me/557598659570" class="icon">
+    <i class="#" width="10px"></i>
+    </a><br><br>
+    </div>
+</div>
+ </div>
+</div><br>
+
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
                         <div class="oii rounded d-flex align-items-center justify-content-between p-4">
@@ -464,6 +488,7 @@ Apikey grátis logo abaixo 👇  se quiser uma personalizada fale com o <a href=
                         </div>
                     </div>
                     <br>
+
                     <div class="col-sm-6 col-xl-3">
                         <div class="oii rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-eye faa-tada animated fa-3x text-primary"></i>
@@ -499,7 +524,50 @@ Apikey grátis logo abaixo 👇  se quiser uma personalizada fale com o <a href=
                         </div>
                     </div>
                     <br>
-                    
+
+<div class="ba">
+   <div class="baum">
+      <h6 class="mb-0">
+ <h6 class="mb-0">
+<p>~ Novidades ~</p>
+<hr>
+<h6>
+<h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Pinterest download adicionado!</h6>
+<small class="im"> 06/02/23 </small></a>
+</h6>
+<hr>
+<h6 class="fw-normal mb-0"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Tiktok download adicionado!</h6>
+<small class="im"> 05/02/23 </small></a>
+</h6>
+
+    </h6>
+  </div>
+</div>
+
+<div class="ba">
+    <div class="baum">
+      <h6 class="mb-0">
+
+<p>© <a href="#">Trevo-APIS</a>, All Right Reserved.</div>
+<div class="col-12 col-sm-6 text-center text-sm-end">Créditos do html <a href="https://htmlcodex.com">HTML Codex</a></p><p>
+<p>Nao sabe como usar? acesse a <a href="#" class="he">Documentação</a> e veja o básico</p>
+<p>
+Apikey grátis aqui em cima ☝️  se quiser uma personalizada fale com o <a href="https://api.whatsapp.com/send?phone=557598659560&text=Oi%20Eu%20gostaria%20de%20criar%20uma%20conta%20so%20seu%20site%20de%20apis%20pra%20bot%20ja%20vou%20mandar%20a%20conta%20e%20a%20senha:" clássico="he">Clover</a>
+</p>
+</p>
+</div>
+</h6>
+</div>
+
+
+
+
+ </div>
+</div><br>
+
+
+
+
                 </div>
             </div>
 
@@ -517,7 +585,22 @@ Apikey grátis logo abaixo 👇  se quiser uma personalizada fale com o <a href=
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 
+.ba{
+background: rgba(000,000,000 , 0.4);
+border-radius: 5px;
+}
+.baum{
+margin: 10px;
+}
+.icons-container{
 
+}
+.bah{
+color: #07e8d9;
+}
+.col-12{
+color: #fff;
+}
 
         .container:after {
             background-color:#EB1616
@@ -587,7 +670,7 @@ Apikey grátis logo abaixo 👇  se quiser uma personalizada fale com o <a href=
 
             color: #089785;
         }
-    </style>
+  </style>
     <!-- fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -604,7 +687,8 @@ Apikey grátis logo abaixo 👇  se quiser uma personalizada fale com o <a href=
     <script src="lib/chart/chart.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+   <script src="assets/owl-carousel/owl.carousel.js"></script>
+
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
@@ -615,4 +699,4 @@ Apikey grátis logo abaixo 👇  se quiser uma personalizada fale com o <a href=
     <script src="js/main.js"></script>
 </body>
 
-</html>
+                  </html>
