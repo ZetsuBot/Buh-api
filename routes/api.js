@@ -457,6 +457,22 @@ router.get('/yt/search', async (req, res, next) => {
   }
 });
 
+router.get('/palavra/conselho', async (req, res, next) => {
+  var Apikey = req.query.apikey
+  if (!Apikey) return res.json(loghandler.notparam)
+  if (listkey.includes(Apikey)) {
+const palavras = require(__path + '/database/conselhos.json');
+const randPalavras = palavras[Math.floor(Math.random() * palavras.length)];
+
+    res.json({
+      conselho: `${randPalavras}`
+    })
+
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
+
 router.get('/download/tiktok', async (req, res, next) => {
   var Apikey = req.query.apikey,
     url = req.query.url
@@ -481,23 +497,22 @@ router.get('/download/tiktok', async (req, res, next) => {
 });
 
 router.get('/download/ig', async (req, res, next) => {
-  const url = req.query.url;
   const apikey = req.query.apikey;
+  const url = req.query.url;
   if (!url) return res.json(loghandler.noturl)
   if (!apikey) return res.json(loghandler.notparam)
   if (listkey.includes(apikey)) {
-    igDownloader(url)
-      .then((result) => {
-        res.json({
-          status: true,
-          codigo: 200,
-          criador: `${creator}`,
-          result
-        })
+    fetch(encodeURI(`https://api.brizaloka-api.tk/sociais/instagram?apikey=brizaloka&url=${url}`))
+      .then(response => response.json())
+      .then(hasil => {
+        var resultado = hasil
+        res.json(
+          resultado
+        )
       })
-      .catch((error) => {
-        res.json(error)
-      });
+      .catch(e => {
+        res.json(loghandler.error)
+      })
   } else {
     res.json(loghandler.invalidKey)
   }
@@ -526,438 +541,7 @@ router.get('/download/ig2', async (req, res, next) => {
   }
 });
 
-router.get('/download/stickerline', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const url = req.query.url;
 
-  if (!url) return res.json(loghandler.noturl)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://nzcha-apii.herokuapp.com/stickerline?url=${url}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/download/apkdl', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const url = req.query.url;
-
-  if (!url) return res.json(loghandler.noturl)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://nzcha-apii.herokuapp.com/apk-download?dl_url=${url}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/download/apk', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const query = req.query.query;
-
-  if (!query) return res.json(loghandler.notquery)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://nzcha-apii.herokuapp.com/apk-search?q=${query}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-
-router.get('/download/mediafire', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const url = req.query.url;
-
-  if (!url) return res.json(loghandler.noturl)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`https://api-json-reysekha.herokuapp.com/api/mediafire/?url=${url}&apikey=Yuzzu`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/stalk/github', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const username = req.query.username;
-
-  if (!username) return res.json(loghandler.notusername)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`https://free-restapii.herokuapp.com/docs/githubstalk?username=${username}&apikey=LoliKillers`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.data.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/stalk/ig', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const username = req.query.username;
-
-  if (!username) return res.json(loghandler.notusername)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`https://aqulzz.herokuapp.com/igstalk?username=${username}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/downloader/wallpaperflare', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const query = req.query.query;
-
-  if (!query) return res.json(loghandler.notquery)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`https://hadi-api.herokuapp.com/api/wallpaperflare?query=${query}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/download/ytmp32', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const url = req.query.url;
-
-  if (!url) return res.json(loghandler.noturl)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/media/ytaudio?url=${url}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/download/ytmp42', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const url = req.query.url;
-
-  if (!url) return res.json(loghandler.noturl)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/media/ytvid?url=${url}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.getVideo;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/download/shoppe', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const q = req.query.q;
-
-  if (!q) return res.json(loghandler.notquery)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`https://api.zeks.me/api/shopee?apikey=reyterganz&q=${q}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.data;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/primbon/zodiak', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const text = req.query.text;
-
-  if (!text) return res.json(loghandler.nottext)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://revita.herokuapp.com/api/primbon/zodiaku?mimpi=${text}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/primbon/artimimpi', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const text = req.query.text;
-
-  if (!text) return res.json(loghandler.nottext)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/primbon/tafsirmimpi?mimpi=${text}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/primbon/artinama', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const text = req.query.text;
-
-  if (!text) return res.json(loghandler.nottext)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/primbon/artinama?name=${text}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/download/unplash', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const q = req.query.q;
-
-  if (!q) return res.json(loghandler.notquery)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`https://api.zeks.me/api/unsplash?apikey=apivinz&q=${q}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/download/sticker', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const q = req.query.q;
-
-  if (!q) return res.json(loghandler.notquery)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`https://api.zeks.me/api/searchsticker?apikey=reyterganz&q=${q}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.sticker;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.get('/downloader/xnxx', async (req, res, next) => {
-  const apikey = req.query.apikey;
-  const query = req.query.query;
-
-  if (!query) return res.json(loghandler.notquery)
-  if (!apikey) return res.json(loghandler.notparam)
-
-  if (listkey.includes(apikey)) {
-    fetch(encodeURI(`http://kocakz.herokuapp.com/api/media/xnxx/search?query=${query}`))
-      .then(response => response.json())
-      .then(hasil => {
-
-        var resultado = hasil.result;
-        res.json({
-          status: true,
-          criador: `${creator}`,
-          resultado
-        })
-      })
-      .catch(e => {
-        res.json(loghandler.error)
-      })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
 
 router.get('/downloader/twittervid', async (req, res, next) => {
   const apikey = req.query.apikey;
