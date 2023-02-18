@@ -15,6 +15,7 @@
   "author": "trevo",
   "license": "ISC",
   "dependencies": {
+    "tinyurl": "^1.1.7",
     "axios": "^0.21.1",
     "base-64": "^1.0.0",
     "base32": "0.0.6",
