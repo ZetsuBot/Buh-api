@@ -2,6 +2,8 @@ const { default: Axios } = require('axios')
 const cheerio = require('cheerio')
 const qs = require('qs')
 const FormData = require('form-data')
+const tiny = require("tinyurl")
+
 
 function ssstik(url) {
      return new Promise((resolve, reject) => {
@@ -223,8 +225,26 @@ function tiktokdownload(url) {
 function tiklydown(url) {
      return new Promise((resolve, reject) => {
           Axios.get(`https://developers.tiklydown.me/api/download?url=${url}`)
-               .then(({ data }) => {
-                    resolve(data)
+               .then(async ({ data }) => {
+               	let semmarca = await tiny.shorten(data.video.noWatermark)
+               	let commarca = await tiny.shorten(data.video.watermark)
+               	let fthumb = await tiny.shorten(data.video.cover)
+                   let audio = await tiny.shorten(data.music.play_url)
+   
+                    resolve({
+                       titulo: data.title,
+                       criado: data.created_at,
+                       autor: data.author.unique_id,
+                       thumbnail: fthumb,
+                       semMarca: semmarca,
+                       comMarca: commarca,
+                       resoMp4: data.video.ratio,
+                       tempo: data.video.durationFormatted,
+                       urlMp3: audio,
+					   curtidas: data.stats.likeCount,
+                       comentarios: data.stats.commentCount
+					   })
+					
                })
                .catch(e => {
                     reject(e)
