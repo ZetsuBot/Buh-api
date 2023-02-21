@@ -483,11 +483,9 @@ router.get('/download/tiktok', async (req, res, next) => {
     const slider_url = 'https://vt.tiktok.com/ZS8e1HeEs/'
     tiktok.tiklydown(url)
         .then(result => {
-          //var music = result.music
-        //  var video = result.video
-          res.json({
+          res.json(
              result
-          })
+          )
     }).catch((error) => {
         res.json(error);
       });
