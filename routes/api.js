@@ -16,7 +16,7 @@ var tiktok = require(__path + '/database/index.js');
 var pin = require(__path + '/database/pinterest.js');
 
 
-const listkey = ["sophia", "clover", "frost"];
+const listkey = ["BuhApiKey"];
 
 
 
